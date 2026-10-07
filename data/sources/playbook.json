@@ -1,0 +1,1725 @@
+{
+ "generated": "2026-10-07T16:41:25-04:00",
+ "patterns": [
+  {
+   "id": "front-door",
+   "name": "Chief-of-staff front door",
+   "icon": "🚪",
+   "what": "One bot is the single place you talk to. It reads your inboxes, decides who should handle what, and hands work to specialists, so you don't have to remember which bot does which job. Specialists report back through it, which keeps one coherent picture of what's going on.",
+   "teach": [
+    {
+     "post": "2099502180378296394",
+     "handle": "petergyang",
+     "name": "Peter Yang",
+     "url": "https://x.com/petergyang/status/2099502180378296394",
+     "date": "2026-09-14",
+     "quote": "3 bots to orchestrate tasks, plan long-term, and maintain my other bots",
+     "is_note": false,
+     "sources": [
+      "bookmarks-lower.yml",
+      "bm4.yml"
+     ],
+     "views": 106644,
+     "approx": false
+    },
+    {
+     "post": "2090195841822998888",
+     "handle": "RayFernando1337",
+     "name": "Ray Fernando",
+     "url": "https://x.com/RayFernando1337/status/2090195841822998888",
+     "date": "2026-08-19",
+     "quote": "I was the bottleneck. So I made a Grok Bot the boss of my repo. From there it recruited more Grok Bots.",
+     "is_note": false,
+     "sources": [
+      "jim/x-bookmarks-2026-08-27.json"
+     ],
+     "views": null,
+     "approx": false
+    },
+    {
+     "post": "2089758434921160877",
+     "handle": "mattyp",
+     "name": "matt palmer",
+     "url": "https://x.com/mattyp/status/2089758434921160877",
+     "date": "2026-08-18",
+     "quote": "Grok Bot has a single output: a message",
+     "is_note": false,
+     "sources": [
+      "jim/x-bookmarks-2026-08-27.json"
+     ],
+     "views": null,
+     "approx": false
+    },
+    {
+     "post": "2095633918611636627",
+     "handle": "joshkim",
+     "name": "Josh Kim",
+     "url": "https://x.com/joshkim/status/2095633918611636627",
+     "date": "2026-09-03",
+     "quote": "Grok Bot for Work: communication, time, information and self-management workflow",
+     "is_note": true,
+     "sources": [
+      "jim/x-bookmarks-2026-09-10.json"
+     ],
+     "views": null,
+     "approx": false
+    }
+   ],
+   "fleet": [
+    {
+     "kind": "profile",
+     "bot": "Michael",
+     "quote": "You are my Chief of Staff. You are the single front door for everything we do here.",
+     "source": "~/agent-data/agents/4feb1fc5-075b-4294-a694-3fa562e5785b/profile.json"
+    },
+    {
+     "kind": "profile",
+     "bot": "Michael",
+     "quote": "Delegate specialized tasks to the right specialist bot.",
+     "source": "~/agent-data/agents/4feb1fc5-075b-4294-a694-3fa562e5785b/profile.json"
+    },
+    {
+     "kind": "profile",
+     "bot": "Oscar",
+     "quote": "Michael is Chief of Staff and the front door: take specialized money work from Michael or Boyd",
+     "source": "~/agent-data/agents/5ea76ec0-2e44-46be-993a-11bc6ba30958/profile.json"
+    },
+    {
+     "kind": "fact",
+     "text": "4 specialists name Michael as the front door in their persona (Jim, Kelly, Oscar, Pam); 9 of 14 other configured bots mention Michael at all.",
+     "source": "profile.json ×15",
+     "how": "regex over every configured profile description"
+    },
+    {
+     "kind": "fact",
+     "text": "194 of 223 logged bot-to-bot messages (87%) were sent to or from Michael (logs end 2026-09-16).",
+     "source": "/workspace/tokenmax/bot-island/data/fleet.json",
+     "how": "agent_msg events where Michael is sender or recipient"
+    },
+    {
+     "kind": "doctor",
+     "quote": "Leftover paused copy of “Jim daily interest note”",
+     "label": "Fleet Doctor, low finding on Michael",
+     "source": "/workspace/tokenmax/bot-island/reports/fleet-health-2026-10-07.html"
+    },
+    {
+     "kind": "doctor",
+     "quote": "Leftover paused copy of “Morning attention brief”",
+     "label": "Fleet Doctor, low finding on Michael",
+     "source": "/workspace/tokenmax/bot-island/reports/fleet-health-2026-10-07.html"
+    }
+   ],
+   "rubric": [
+    {
+     "text": "A single, named front door exists",
+     "status": "yes",
+     "because": "Michael profile"
+    },
+    {
+     "text": "Specialists route their results back through it",
+     "status": "yes",
+     "because": "4 personas say so"
+    },
+    {
+     "text": "It actually brokers most bot-to-bot traffic",
+     "status": "yes",
+     "because": "87% of messages"
+    },
+    {
+     "text": "Its own routine list is clean (no leftover duties it handed off)",
+     "status": "no",
+     "because": "Fleet Doctor: two paused copies still on Michael"
+    },
+    {
+     "text": "Newer bots are wired into the front door too",
+     "status": "partial",
+     "because": "9/14 mention Michael"
+    }
+   ],
+   "next": "Delete Michael's two paused routine copies so Brief and Jim are the only owners. Then give Michael a short \"who owns what\" routing table listing every bot, including the newer ones (Ryan, Path, Pods, the tutors and TokenMax), so nothing new bypasses the front door by accident.",
+   "score": 3.5
+  },
+  {
+   "id": "specialists",
+   "name": "Specialist bots: one job, explicit anti-jobs",
+   "icon": "🧩",
+   "what": "Instead of one do-everything assistant, each bot gets one narrow job, a short list of things it must never do, a voice and a wake schedule. Narrow bots are easier to trust, cheaper to run and easier to fix, and the anti-jobs stop them drifting into each other's work.",
+   "teach": [
+    {
+     "post": "2095570958350499868",
+     "handle": "pengzheng_",
+     "name": "Peng Zheng",
+     "url": "https://x.com/pengzheng_/status/2095570958350499868",
+     "date": "2026-09-03",
+     "quote": "Design thinking behind Grok Bot: persistent roles, state, scoped context and coordinated teams",
+     "is_note": true,
+     "sources": [
+      "jim/x-bookmarks-2026-09-10.json"
+     ],
+     "views": null,
+     "approx": false
+    },
+    {
+     "post": "2099502180378296394",
+     "handle": "petergyang",
+     "name": "Peter Yang",
+     "url": "https://x.com/petergyang/status/2099502180378296394",
+     "date": "2026-09-14",
+     "quote": "The 11 Grok Bots I still use today are very different from the ones I set up at launch.",
+     "is_note": false,
+     "sources": [
+      "bookmarks-lower.yml",
+      "bm4.yml"
+     ],
+     "views": 106644,
+     "approx": false
+    },
+    {
+     "post": "2101419129643380772",
+     "handle": "ScottyBeamIO",
+     "name": "SCOTTY BEAM",
+     "url": "https://x.com/ScottyBeamIO/status/2101419129643380772",
+     "date": "2026-09-19",
+     "quote": "nine Grok Bot agents that talk to each",
+     "is_note": false,
+     "sources": [
+      "bookmarks-mid.yml",
+      "x-scrape-2026-09-21.json.log"
+     ],
+     "views": 19348,
+     "approx": false
+    }
+   ],
+   "fleet": [
+    {
+     "kind": "skill",
+     "skill": "Design a Grok Bot",
+     "quote": "A bot is four fields, in this order:",
+     "source": "~/agent-data/workflows/design-a-grok-bot/SKILL.md"
+    },
+    {
+     "kind": "skill",
+     "skill": "Design a Grok Bot",
+     "quote": "Anti-jobs. What it never does, even if asked. Adjacent work goes to a different bot.",
+     "source": "~/agent-data/workflows/design-a-grok-bot/SKILL.md"
+    },
+    {
+     "kind": "profile",
+     "bot": "Dr. EggBot",
+     "quote": "one job, one voice, explicit anti-jobs, no leftover tools",
+     "source": "~/agent-data/agents/759c205a-40a5-4e74-9620-3c04714824f4/profile.json"
+    },
+    {
+     "kind": "fact",
+     "text": "8 of 15 configured bots have an explicit \"Anti-jobs\" section; 8 state an \"ONLY job\".",
+     "source": "profile.json ×15",
+     "how": "regex over profile descriptions"
+    },
+    {
+     "kind": "doctor",
+     "quote": "Two active bots share one job: Boyd Family Times (archive) and Boyd Family Times",
+     "label": null,
+     "source": "/workspace/tokenmax/bot-island/reports/fleet-health-2026-10-07.html"
+    },
+    {
+     "kind": "doctor",
+     "quote": "Unfinished bot in the Hatchery: New Bot",
+     "label": null,
+     "source": "/workspace/tokenmax/bot-island/reports/fleet-health-2026-10-07.html"
+    }
+   ],
+   "rubric": [
+    {
+     "text": "A written bot-design standard",
+     "status": "yes",
+     "because": "Design a Grok Bot skill"
+    },
+    {
+     "text": "Most bots list explicit anti-jobs",
+     "status": "yes",
+     "because": "8/15"
+    },
+    {
+     "text": "Most bots name exactly one job",
+     "status": "partial",
+     "because": "8/15"
+    },
+    {
+     "text": "No two bots share a job",
+     "status": "no",
+     "because": "Family Times duplicated (archive still scheduled)"
+    },
+    {
+     "text": "No unfinished or dormant bots",
+     "status": "no",
+     "because": "\"New Bot\" egg has no persona"
+    }
+   ],
+   "next": "Ask Dr. EggBot to retrofit the four-field shape (one job, anti-jobs, voice, wake) onto the older personas that predate it: Michael, Oscar, Pam, Jim and Kelly. Retire the Family Times archive bot's schedule, and finish or delete \"New Bot\".",
+   "score": 2.5
+  },
+  {
+   "id": "memory",
+   "name": "Memory tiers",
+   "icon": "🧠",
+   "what": "Good fleets remember at three levels: the conversation (short-lived), each bot's own memory (decisions and running lists), and a shared long-term record that every bot can read. Remembering what was already decided stops the same question coming back every week.",
+   "teach": [
+    {
+     "post": "2101695373748158779",
+     "handle": "0xnicc0",
+     "name": "nicco",
+     "url": "https://x.com/0xnicc0/status/2101695373748158779",
+     "date": "2026-09-20",
+     "quote": "deploys agents that remember state, catch hallucinations, and compound across runs",
+     "is_note": false,
+     "sources": [
+      "bookmarks-mid.yml",
+      "bookmarks-top.yml",
+      "x-scrape-2026-09-21.json.log"
+     ],
+     "views": 7297,
+     "approx": false
+    },
+    {
+     "post": "2089917020087210160",
+     "handle": "nateherk",
+     "name": "Nate Herk",
+     "url": "https://x.com/nateherk/status/2089917020087210160",
+     "date": "2026-08-18",
+     "quote": "Creating a few bots is easy. The useful part is teaching them your",
+     "is_note": false,
+     "sources": [
+      "jim/x-bookmarks-2026-08-27.json"
+     ],
+     "views": null,
+     "approx": false
+    },
+    {
+     "post": "2096516805242310807",
+     "handle": "Scobleizer",
+     "name": "Robert Scoble",
+     "url": "https://x.com/Scobleizer/status/2096516805242310807",
+     "date": "2026-09-06",
+     "quote": "Aligned News AI reads 30,000 posts/day; memory and model improvement",
+     "is_note": true,
+     "sources": [
+      "jim/x-bookmarks-2026-09-10.json"
+     ],
+     "views": null,
+     "approx": false
+    }
+   ],
+   "fleet": [
+    {
+     "kind": "profile",
+     "bot": "Ryan",
+     "quote": "keep a running shortlist in your own memory",
+     "source": "~/agent-data/agents/6a33ea82-5497-43fa-a644-aebed89a6bf6/profile.json"
+    },
+    {
+     "kind": "profile",
+     "bot": "TokenMax",
+     "quote": "Keep a running project log in memory so you never rebuild the same thing twice",
+     "source": "~/agent-data/agents/b56dd939-08e7-4c0a-82af-140a51de11b4/profile.json"
+    },
+    {
+     "kind": "profile",
+     "bot": "Jim",
+     "quote": "write a daily Notion entry on themes and topics",
+     "source": "~/agent-data/agents/9abbfaf4-f401-4e70-8619-da598173399a/profile.json"
+    },
+    {
+     "kind": "skill",
+     "skill": "Routine healthcheck",
+     "quote": "check the parent's memory (RecallMemory) for routines the user called intentional and cleanups already done",
+     "source": "~/agent-data/workflows/routine-healthcheck/SKILL.md"
+    },
+    {
+     "kind": "profile",
+     "bot": "Boyd Family Times",
+     "quote": "Keep this chat short — editions live as PDFs, not a growing archive of every past issue.",
+     "source": "~/agent-data/agents/784bedfc-74d6-45a0-a291-762ff05bb0c6/profile.json"
+    },
+    {
+     "kind": "fact",
+     "text": "11 of 16 bots on Bot Island have a memory file with an update time.",
+     "source": "/workspace/tokenmax/bot-island/data/fleet.json",
+     "how": "bots[].memoryUpdatedAt not null"
+    },
+    {
+     "kind": "profile",
+     "bot": "Oscar",
+     "quote": "Household: Boyd (Christopher Boyd), wife Miranda (Randi).",
+     "source": "~/agent-data/agents/5ea76ec0-2e44-46be-993a-11bc6ba30958/profile.json"
+    },
+    {
+     "kind": "profile",
+     "bot": "Pam",
+     "quote": "Household: Miranda; kids Charlotte (Char, 2/12/2013) and Victor (Vic, 6/23/2015) only.",
+     "source": "~/agent-data/agents/e1bfeb52-89c2-48fa-b6dd-b4dcf9ed54e1/profile.json"
+    }
+   ],
+   "rubric": [
+    {
+     "text": "Bots keep their own working memory",
+     "status": "yes",
+     "because": "11/16 have memory"
+    },
+    {
+     "text": "A long-term journal tier exists",
+     "status": "yes",
+     "because": "Jim's daily Notion entry"
+    },
+    {
+     "text": "Healthchecks consult \"already decided\" memory",
+     "status": "yes",
+     "because": "Routine/Transcript healthcheck skills"
+    },
+    {
+     "text": "One shared source for household facts",
+     "status": "no",
+     "because": "Household facts are copied into Oscar and Pam separately"
+    },
+    {
+     "text": "Chat-length hygiene on daily bots",
+     "status": "partial",
+     "because": "Only Family Times and Pods say \"keep this chat short\""
+    }
+   ],
+   "next": "Create one shared \"Boyd household & decisions\" note (family, schools, institutions, standing decisions) and have Oscar, Pam, Path and the tutors point to it instead of each carrying its own copy. A fact then only has to be fixed in one place.",
+   "score": 3.5
+  },
+  {
+   "id": "routines-listeners",
+   "name": "Routines vs. listeners",
+   "icon": "⏰",
+   "what": "A routine wakes a bot on a clock (\"every weekday at 8\"). A listener wakes it when something happens, like a new email, a Slack mention or a webhook. Clocks suit digests. Listeners suit \"tell me when X arrives\" jobs, where polling burns tokens on empty runs.",
+   "teach": [
+    {
+     "post": "2090490444224331787",
+     "handle": "monokern",
+     "name": "monokern",
+     "url": "https://x.com/monokern/status/2090490444224331787",
+     "date": "2026-08-20",
+     "quote": "Every AI tool you have used until now waits for you.",
+     "is_note": false,
+     "sources": [
+      "jim/x-bookmarks-2026-08-27.json"
+     ],
+     "views": 1000000,
+     "approx": true
+    },
+    {
+     "post": "2090162525480366239",
+     "handle": "0xCodez",
+     "name": "Codez",
+     "url": "https://x.com/0xCodez/status/2090162525480366239",
+     "date": "2026-08-19",
+     "quote": "every time our team gets feedback on GrokBot, my bots are automatically going off and fixing them",
+     "is_note": false,
+     "sources": [
+      "jim/x-bookmarks-2026-08-27.json"
+     ],
+     "views": null,
+     "approx": false
+    }
+   ],
+   "fleet": [
+    {
+     "kind": "fact",
+     "text": "16 routines on Bot Island, 14 enabled. Every one is a cron schedule.",
+     "source": "/workspace/tokenmax/bot-island/data/fleet.json",
+     "how": "bots[].routines[].cron"
+    },
+    {
+     "kind": "fact",
+     "text": "All 118 logged runs were started by trigger = \"schedule\" (118 ok). No webhook- or event-triggered run appears.",
+     "source": "/workspace/tokenmax/bot-island/data/fleet.json",
+     "how": "bots[].routines[].runs[].trigger"
+    },
+    {
+     "kind": "skill",
+     "skill": "Routine healthcheck",
+     "quote": "Prefer an event listener for Slack, GitHub, and similar triggers.",
+     "source": "~/agent-data/workflows/routine-healthcheck/SKILL.md"
+    },
+    {
+     "kind": "skill",
+     "skill": "Make Bot UI",
+     "quote": "A server on this computer POSTs JSON to a webhook routine. The bot wakes with that JSON.",
+     "source": "~/agent-data/workflows/make-bot-ui/SKILL.md"
+    },
+    {
+     "kind": "doctor",
+     "quote": "Oscar: “Watch for Kia Finance statement” and “Due-soon bills and money surprises” fire within 20 minutes",
+     "label": null,
+     "source": "/workspace/tokenmax/bot-island/reports/fleet-health-2026-10-07.html"
+    }
+   ],
+   "rubric": [
+    {
+     "text": "Standing routines cover the daily jobs",
+     "status": "yes",
+     "because": "14 enabled"
+    },
+    {
+     "text": "Routines run reliably",
+     "status": "yes",
+     "because": "118/118 ok"
+    },
+    {
+     "text": "At least one event-driven (listener/webhook) wake in use",
+     "status": "no",
+     "because": "none logged"
+    },
+    {
+     "text": "\"Watch for X\" jobs use triggers, not polling",
+     "status": "no",
+     "because": "Kia statement watch polls every weekday"
+    },
+    {
+     "text": "The webhook capability is documented",
+     "status": "yes",
+     "because": "Make Bot UI skill"
+    }
+   ],
+   "next": "Pick one \"watch for X\" job and convert it to a listener: Oscar's \"Watch for Kia Finance statement\" is the obvious first one. It currently polls every weekday at 8:31. Keep clock routines for the digests.",
+   "score": 3
+  },
+  {
+   "id": "skills",
+   "name": "Skills library",
+   "icon": "📚",
+   "what": "Repeatable know-how lives in skill files, not in each bot's prompt. Bots link to a skill (\"follow PowerSchool own-browser grades\") so a fix made once reaches every bot that uses it. Packs like pstack bundle a whole working style.",
+   "teach": [
+    {
+     "post": "2092024658354938114",
+     "handle": "poteto",
+     "name": "lauren",
+     "url": "https://x.com/poteto/status/2092024658354938114",
+     "date": "2026-08-24",
+     "quote": "if you like that one check out the whole plugin: plugins/pstack/docs/guide/README.md",
+     "is_note": false,
+     "sources": [
+      "jim/x-bookmarks-2026-08-27.json"
+     ],
+     "views": null,
+     "approx": false
+    },
+    {
+     "post": "2092317628635418739",
+     "handle": "poteto",
+     "name": "lauren",
+     "url": "https://x.com/poteto/status/2092317628635418739",
+     "date": "2026-08-25",
+     "quote": "just shipped deeplinks for Grok @Bot on desktop",
+     "is_note": false,
+     "sources": [
+      "jim/x-bookmarks-2026-08-27.json"
+     ],
+     "views": null,
+     "approx": false
+    },
+    {
+     "post": "2091958927420277218",
+     "handle": "eng_khairallah1",
+     "name": "Khairallah AL-Awady",
+     "url": "https://x.com/eng_khairallah1/status/2091958927420277218",
+     "date": "2026-08-24",
+     "quote": "1. run the setup script, it auto detects claude code, codex, kiro, factory or opencode",
+     "is_note": false,
+     "sources": [
+      "jim/x-bookmarks-2026-08-27.json"
+     ],
+     "views": null,
+     "approx": false
+    },
+    {
+     "post": "2096238185760350233",
+     "handle": "Austen",
+     "name": "Austen Allred",
+     "url": "https://x.com/Austen/status/2096238185760350233",
+     "date": "2026-09-05",
+     "quote": "Grok Bot skill runs Grok, Claude Code and Codex to argue toward consensus",
+     "is_note": true,
+     "sources": [
+      "jim/x-bookmarks-2026-09-10.json"
+     ],
+     "views": null,
+     "approx": false
+    }
+   ],
+   "fleet": [
+    {
+     "kind": "fact",
+     "text": "9 workflow skills on the box: Design a Grok Bot, Draft as Boyd, Jim Chrome history recovery, Make Bot UI, Morning newspaper bootstrap, Newspaper silent-print verify, PowerSchool own-browser grades, Routine healthcheck, Transcript healthcheck.",
+     "source": "~/agent-data/workflows/*/SKILL.md",
+     "how": "directory listing"
+    },
+    {
+     "kind": "profile",
+     "bot": "Vic Tutor",
+     "quote": "PowerSchool: always follow [PowerSchool own-browser grades](sand-workflow:powerschool-own-browser-grades)",
+     "source": "~/agent-data/agents/7e4990fe-38aa-4d6d-aa6b-c87baad5f8d1/profile.json"
+    },
+    {
+     "kind": "profile",
+     "bot": "Dwight",
+     "quote": "Slash-skills are live skill files, not app menu commands.",
+     "source": "~/agent-data/agents/d0afda46-7287-40c1-b934-70ab9225584e/profile.json"
+    },
+    {
+     "kind": "skill",
+     "skill": "Design a Grok Bot",
+     "quote": "Run pstack's setup-pstack skill",
+     "source": "~/agent-data/workflows/design-a-grok-bot/SKILL.md"
+    },
+    {
+     "kind": "doctor",
+     "quote": "Twin routines: “Vic weeknight homework check-in” and “Char weeknight homework check-in”",
+     "label": null,
+     "source": "/workspace/tokenmax/bot-island/reports/fleet-health-2026-10-07.html"
+    },
+    {
+     "kind": "doctor",
+     "quote": "Move the shared rules into one skill or doc that both prompts reference, and keep only the kid-specific parts in each routine.",
+     "label": null,
+     "source": "/workspace/tokenmax/bot-island/reports/fleet-health-2026-10-07.html"
+    }
+   ],
+   "rubric": [
+    {
+     "text": "A real skills library exists (5+ skills)",
+     "status": "yes",
+     "because": "9 skills"
+    },
+    {
+     "text": "Bots link skills instead of pasting them",
+     "status": "yes",
+     "because": "3 bots link skills"
+    },
+    {
+     "text": "A coding standard pack is adopted (pstack)",
+     "status": "yes",
+     "because": "Dwight + Design a Grok Bot"
+    },
+    {
+     "text": "Duplicated instructions are factored into skills",
+     "status": "no",
+     "because": "Tutor check-ins overlap 49%"
+    },
+    {
+     "text": "The heaviest routines are backed by skills",
+     "status": "partial",
+     "because": "Family Times yes; Jim note and Oscar bills no"
+    }
+   ],
+   "next": "Write a \"Weeknight homework check-in\" skill holding the shared rules for both tutors, and link it from both routines, leaving only the kid-specific bits in each. Then do the same for Jim's daily interest note, the next-heaviest routine without a skill.",
+   "score": 3.5
+  },
+  {
+   "id": "healthchecks",
+   "name": "Healthchecks & observability",
+   "icon": "🩺",
+   "what": "A fleet needs a doctor: a standing check that looks at what actually ran, flags waste, failures and duplicates, and proposes fixes. Seeing the whole fleet at once (a map, a scorecard) makes problems obvious before they cost money or trust.",
+   "teach": [
+    {
+     "post": "2090649600231379113",
+     "handle": "ericzakariasson",
+     "name": "eric zakariasson",
+     "url": "https://x.com/ericzakariasson/status/2090649600231379113",
+     "date": "2026-08-20",
+     "quote": "given all the bots we have, can you visualize how they're being used and which ones are used the most",
+     "is_note": false,
+     "sources": [
+      "jim/x-bookmarks-2026-08-27.json"
+     ],
+     "views": 14000,
+     "approx": true
+    },
+    {
+     "post": "2093023531642863686",
+     "handle": "poteto",
+     "name": "lauren",
+     "url": "https://x.com/poteto/status/2093023531642863686",
+     "date": "2026-08-27",
+     "quote": "i built an island that visualizes my bots as they work!",
+     "is_note": false,
+     "sources": [
+      "jim/x-bookmarks-2026-08-27.json"
+     ],
+     "views": 123000,
+     "approx": true
+    },
+    {
+     "post": "2107472129960575369",
+     "handle": "benln",
+     "name": "Ben Lang",
+     "url": "https://x.com/benln/status/2107472129960575369",
+     "date": "2026-10-06",
+     "quote": "@benln (Ben Lang), ~10am ET Oct 6: tip to have your main Grok Bot read the new x.ai/bot/guides and recommend best practices for your Bots (267K views).",
+     "is_note": true,
+     "sources": [
+      "ij_2026-10-06_x.md"
+     ],
+     "views": null,
+     "approx": false
+    },
+    {
+     "post": "2092291417737400799",
+     "handle": "GrokBotDev",
+     "name": "GrokBot.dev",
+     "url": "https://x.com/GrokBotDev/status/2092291417737400799",
+     "date": "2026-08-25",
+     "quote": "Your Grok Bot reads the feed daily and suggests what you should set up next",
+     "is_note": false,
+     "sources": [
+      "jim/x-bookmarks-2026-08-27.json"
+     ],
+     "views": null,
+     "approx": false
+    }
+   ],
+   "fleet": [
+    {
+     "kind": "fact",
+     "text": "Dr. EggBot runs \"routine-healthcheck\" (35 6 * * 1) and \"transcript-healthcheck\" (30 6 * * 1-5); every logged run was ok.",
+     "source": "/workspace/tokenmax/bot-island/data/fleet.json",
+     "how": "Dr. EggBot routines"
+    },
+    {
+     "kind": "skill",
+     "skill": "Routine healthcheck",
+     "quote": "Scan the fleet's routines for token waste, using what actually fired.",
+     "source": "~/agent-data/workflows/routine-healthcheck/SKILL.md"
+    },
+    {
+     "kind": "skill",
+     "skill": "Transcript healthcheck",
+     "quote": "Propose new skills, bots, or routines only when evidence supports them.",
+     "source": "~/agent-data/workflows/transcript-healthcheck/SKILL.md"
+    },
+    {
+     "kind": "doctor",
+     "quote": "fleet health score (100 = nothing to fix) · first saved report, so no trend yet",
+     "label": null,
+     "source": "/workspace/tokenmax/bot-island/reports/fleet-health-2026-10-07.html"
+    },
+    {
+     "kind": "doctor",
+     "quote": "Local activity logs end Wed Sep 16, 5:30 AM ET",
+     "label": null,
+     "source": "/workspace/tokenmax/bot-island/reports/fleet-health-2026-10-07.html"
+    }
+   ],
+   "rubric": [
+    {
+     "text": "A standing routine/token healthcheck",
+     "status": "yes",
+     "because": "routine-healthcheck, weekly"
+    },
+    {
+     "text": "A standing friction/transcript healthcheck",
+     "status": "yes",
+     "because": "transcript-healthcheck, weekdays"
+    },
+    {
+     "text": "A visual map of the fleet",
+     "status": "yes",
+     "because": "Bot Island + Fleet Doctor"
+    },
+    {
+     "text": "Health tracked as a trend over time",
+     "status": "no",
+     "because": "First saved report: score 50, no trend yet"
+    },
+    {
+     "text": "Telemetry is current",
+     "status": "no",
+     "because": "Local activity logs end 2026-09-16"
+    }
+   ],
+   "next": "Run Fleet Doctor weekly (Monday, right after EggBot's routine-healthcheck) so the score turns into a trend line. Also find out why local activity logs stopped on Sep 16, so the doctor sees current behavior.",
+   "score": 3
+  },
+  {
+   "id": "verification",
+   "name": "Verification & eval loops",
+   "icon": "✅",
+   "what": "Don't trust \"done\". Good agents prove their work against the real thing (the printed page, the live profile, the passing test) and separate what they verified from what they guessed. An eval loop goes further: it scores outputs regularly, so quality can't silently slide.",
+   "teach": [
+    {
+     "post": "2104088147739242660",
+     "handle": "kloss_xyz",
+     "name": "@kloss_xyz",
+     "url": "https://x.com/kloss_xyz/status/2104088147739242660",
+     "date": "2026-09-27",
+     "quote": "@kloss_xyz — vibe-coding prompt: list codebase assumptions as verified vs guessed, then a high-confidence surgical fix (Claude Code / Codex / Grok). ~01:58 ET Sun. post",
+     "is_note": true,
+     "sources": [
+      "ij_2026-09-27.md",
+      "ij_2026-09-27_bookmarks.md"
+     ],
+     "views": null,
+     "approx": false
+    },
+    {
+     "post": "2101695373748158779",
+     "handle": "0xnicc0",
+     "name": "nicco",
+     "url": "https://x.com/0xnicc0/status/2101695373748158779",
+     "date": "2026-09-20",
+     "quote": "You're supposed to build a system that prompts itself",
+     "is_note": false,
+     "sources": [
+      "bookmarks-mid.yml",
+      "bookmarks-top.yml",
+      "x-scrape-2026-09-21.json.log"
+     ],
+     "views": 7297,
+     "approx": false
+    },
+    {
+     "post": "2095583388493361257",
+     "handle": "bossriceshark",
+     "name": "Matt Rice",
+     "url": "https://x.com/bossriceshark/status/2095583388493361257",
+     "date": "2026-09-03",
+     "quote": "Fable Oracle planning -> Engineer Cursor cloud implementation -> second agent review",
+     "is_note": true,
+     "sources": [
+      "jim/x-bookmarks-2026-09-10.json"
+     ],
+     "views": null,
+     "approx": false
+    },
+    {
+     "post": "2090732576637952348",
+     "handle": "heyrobinai",
+     "name": "Robin Delta",
+     "url": "https://x.com/heyrobinai/status/2090732576637952348",
+     "date": "2026-08-21",
+     "quote": "the AI industry promised us agents that work for us and shipped us agents we have to work for.",
+     "is_note": false,
+     "sources": [
+      "jim/x-bookmarks-2026-08-27.json"
+     ],
+     "views": 65000,
+     "approx": true
+    }
+   ],
+   "fleet": [
+    {
+     "kind": "skill",
+     "skill": "Newspaper silent-print verify",
+     "quote": "Never claim the paper printed unless something stronger than the spooler said \"sent\" or \"3/3\".",
+     "source": "~/agent-data/workflows/newspaper-silent-print-verify/SKILL.md"
+    },
+    {
+     "kind": "skill",
+     "skill": "Design a Grok Bot",
+     "quote": "Do not trust the tool ack alone.",
+     "source": "~/agent-data/workflows/design-a-grok-bot/SKILL.md"
+    },
+    {
+     "kind": "profile",
+     "bot": "Dwight",
+     "quote": "prove it against the real artifact before claiming done",
+     "source": "~/agent-data/agents/d0afda46-7287-40c1-b934-70ab9225584e/profile.json"
+    },
+    {
+     "kind": "fact",
+     "text": "9 of 15 configured bots carry a never-invent rule (Boyd Family Times, Char Tutor, Jim, Oscar, Pam, Path, Pods, Ryan, Vic Tutor).",
+     "source": "profile.json ×15",
+     "how": "regex \"never invent|do not invent\""
+    },
+    {
+     "kind": "doctor",
+     "quote": "Brief: “Morning attention brief” missed 2 of 4 scheduled runs",
+     "label": null,
+     "source": "/workspace/tokenmax/bot-island/reports/fleet-health-2026-10-07.html"
+    },
+    {
+     "kind": "doctor",
+     "quote": "Family Times couldn't print 4 of the last 7 editions",
+     "label": null,
+     "source": "/workspace/tokenmax/bot-island/reports/fleet-health-2026-10-07.html"
+    }
+   ],
+   "rubric": [
+    {
+     "text": "Verify-before-claiming rules exist",
+     "status": "yes",
+     "because": "Print verify skill, Design-a-bot, Dwight"
+    },
+    {
+     "text": "Most bots forbid inventing facts",
+     "status": "yes",
+     "because": "9/15"
+    },
+    {
+     "text": "Code gets a second-agent review step",
+     "status": "no",
+     "because": "Not written into Dwight or any workflow skill"
+    },
+    {
+     "text": "Outputs are scored on a schedule (evals)",
+     "status": "no",
+     "because": "No eval set or score history found"
+    },
+    {
+     "text": "Failures are surfaced automatically",
+     "status": "yes",
+     "because": "Fleet Doctor flags missed runs and print failures"
+    }
+   ],
+   "next": "Add a tiny eval: every Friday, Dr. EggBot scores five of the week's Brief and Pods outputs against a 3-question rubric (right items? anything invented? quiet when nothing?) and logs the score next to Fleet Doctor's. For Dwight, bake in the \"verified vs guessed\" assumption list before every fix.",
+   "score": 3
+  },
+  {
+   "id": "arena",
+   "name": "Arena & parallel candidates",
+   "icon": "🏟️",
+   "what": "For work that matters, run several agents (or models) on the same task in parallel, then keep the best or merge them. You trade some compute for a much better result, and a second opinion catches the confident mistakes a single agent makes.",
+   "teach": [
+    {
+     "post": "2096238185760350233",
+     "handle": "Austen",
+     "name": "Austen Allred",
+     "url": "https://x.com/Austen/status/2096238185760350233",
+     "date": "2026-09-05",
+     "quote": "Grok Bot skill runs Grok, Claude Code and Codex to argue toward consensus",
+     "is_note": true,
+     "sources": [
+      "jim/x-bookmarks-2026-09-10.json"
+     ],
+     "views": null,
+     "approx": false
+    },
+    {
+     "post": "2090162525480366239",
+     "handle": "0xCodez",
+     "name": "Codez",
+     "url": "https://x.com/0xCodez/status/2090162525480366239",
+     "date": "2026-08-19",
+     "quote": "Right now I'm running 20-30 GrokBot agents, they are fixing 100% of my code bugs even when I sleep",
+     "is_note": false,
+     "sources": [
+      "jim/x-bookmarks-2026-08-27.json"
+     ],
+     "views": null,
+     "approx": false
+    },
+    {
+     "post": "2095944004932432216",
+     "handle": "AlexFinn",
+     "name": "Alex Finn",
+     "url": "https://x.com/AlexFinn/status/2095944004932432216",
+     "date": "2026-09-04",
+     "quote": "Grok Bot coding with developer and project-management bots plus Cursor cloud agents",
+     "is_note": true,
+     "sources": [
+      "jim/x-bookmarks-2026-09-10.json"
+     ],
+     "views": null,
+     "approx": false
+    },
+    {
+     "post": "2102050467505430555",
+     "handle": "poteto",
+     "name": "lauren",
+     "url": "https://x.com/poteto/status/2102050467505430555",
+     "date": "2026-09-21",
+     "quote": "here's how i shipped 2,500 PRs last month to production",
+     "is_note": false,
+     "sources": [
+      "x-scrape-2026-09-21.json.log"
+     ],
+     "views": 312000,
+     "approx": true
+    },
+    {
+     "post": "2101269135724310811",
+     "handle": "DavidOndrej1",
+     "name": "David Ondrej",
+     "url": "https://x.com/DavidOndrej1/status/2101269135724310811",
+     "date": "2026-09-19",
+     "quote": "You will soon have 1,000+ agents running at all times.",
+     "is_note": false,
+     "sources": [
+      "bookmarks-full.yml",
+      "bookmarks-mid.yml",
+      "bookmarks-reload.yml",
+      "bookmarks-scroll.yml",
+      "bookmarks-scroll2.yml",
+      "bookmarks.yml",
+      "bookmarks2.yml",
+      "x-scrape-2026-09-21.json.log"
+     ],
+     "views": 33589,
+     "approx": false
+    }
+   ],
+   "fleet": [
+    {
+     "kind": "profile",
+     "bot": "Dwight",
+     "quote": "always by launching Cursor Cloud Agents against the real repo",
+     "source": "~/agent-data/agents/d0afda46-7287-40c1-b934-70ab9225584e/profile.json"
+    },
+    {
+     "kind": "profile",
+     "bot": "TokenMax",
+     "quote": "Run parallel agents, arenas, and long verification loops.",
+     "source": "~/agent-data/agents/b56dd939-08e7-4c0a-82af-140a51de11b4/profile.json"
+    },
+    {
+     "kind": "profile",
+     "bot": "TokenMax",
+     "quote": "pstack (arena, architect, blast-radius) is the quality bar.",
+     "source": "~/agent-data/agents/b56dd939-08e7-4c0a-82af-140a51de11b4/profile.json"
+    },
+    {
+     "kind": "fact",
+     "text": "Dwight logged 5 events and 2 chats in the Bot Island data, with no routines.",
+     "source": "/workspace/tokenmax/bot-island/data/fleet.json",
+     "how": "bots[Dwight]"
+    },
+    {
+     "kind": "doctor",
+     "quote": "Thu Sep 10, 6:36 PM ET",
+     "label": "Fleet Doctor bots table, Dwight's last-active time",
+     "source": "/workspace/tokenmax/bot-island/reports/fleet-health-2026-10-07.html"
+    }
+   ],
+   "rubric": [
+    {
+     "text": "Repo work goes to cloud agents, not local clones",
+     "status": "yes",
+     "because": "Dwight persona"
+    },
+    {
+     "text": "Arena is named as the quality bar",
+     "status": "yes",
+     "because": "pstack arena in TokenMax persona"
+    },
+    {
+     "text": "A parallel or arena run is actually logged",
+     "status": "no",
+     "because": "None in the Bot Island events"
+    },
+    {
+     "text": "The coding bot is in regular use",
+     "status": "no",
+     "because": "Dwight: 5 events, last active Sep 10"
+    },
+    {
+     "text": "Big decisions get a multi-model second opinion",
+     "status": "no",
+     "because": "No consensus skill installed"
+    }
+   ],
+   "next": "Run one real arena: give Dwight a small, real task in one of your repos and have him launch 3 Cloud Agents in parallel with pstack's arena, then pick the winner with a short reasoned diff review. It uses the Cursor pool (0% used) that resets Oct 20.",
+   "score": 2
+  },
+  {
+   "id": "cost",
+   "name": "Cost discipline",
+   "icon": "💸",
+   "what": "Know what each routine costs and spend where it pays. Cheap wakes for checks, bigger budgets for deep work, no duplicate runs, and fewer screenshots-driven sessions. Measure first, because the biggest waste is usually one job nobody looks at.",
+   "teach": [
+    {
+     "post": "2100199909148307612",
+     "handle": "Da7_Tech",
+     "name": "Da7em",
+     "url": "https://x.com/Da7_Tech/status/2100199909148307612",
+     "date": "2026-09-16",
+     "quote": "Devin Max ($200) Droid Max ($200) MiniMax Token Plan (Annual) Google AI Pro (Annual) Hermes Agent Bonsai 27B locally",
+     "is_note": false,
+     "sources": [
+      "bookmarks-lower.yml",
+      "bm3.yml"
+     ],
+     "views": 14081,
+     "approx": false
+    },
+    {
+     "post": "2103781383844053446",
+     "handle": "kloss_xyz",
+     "name": "@kloss_xyz",
+     "url": "https://x.com/kloss_xyz/status/2103781383844053446",
+     "date": "2026-09-26",
+     "quote": "Known head (still 2nd): @kloss_xyz Sep 26 Claude Code effort levels (Low/Medium/High/Max), quoting @trq212",
+     "is_note": true,
+     "sources": [
+      "ij_2026-09-27_bookmarks.md"
+     ],
+     "views": null,
+     "approx": false
+    },
+    {
+     "post": "2102020433394483458",
+     "handle": "viticci",
+     "name": "Federico Viticci",
+     "url": "https://x.com/viticci/status/2102020433394483458",
+     "date": "2026-09-21",
+     "quote": "It’s the dream Mac for local AI agents. And I’ve gone local-only with Hermes.",
+     "is_note": false,
+     "sources": [
+      "x-scrape-2026-09-21.json.log"
+     ],
+     "views": 267000,
+     "approx": true
+    }
+   ],
+   "fleet": [
+    {
+     "kind": "profile",
+     "bot": "Kelly",
+     "quote": "Stay cheap on X credits: estimate before expensive search",
+     "source": "~/agent-data/agents/3e3aaa23-1281-43d0-9cac-e38e22ba5be0/profile.json"
+    },
+    {
+     "kind": "profile",
+     "bot": "TokenMax",
+     "quote": "Never turn on on-demand or overage spend",
+     "source": "~/agent-data/agents/b56dd939-08e7-4c0a-82af-140a51de11b4/profile.json"
+    },
+    {
+     "kind": "doctor",
+     "quote": "Boyd Family Times (archive): “Morning Boyd Family Times” ≈ 108 agent-minutes/week",
+     "label": null,
+     "source": "/workspace/tokenmax/bot-island/reports/fleet-health-2026-10-07.html"
+    },
+    {
+     "kind": "doctor",
+     "quote": "Oscar: “Due-soon bills and money surprises” ≈ 34 agent-minutes/week",
+     "label": null,
+     "source": "/workspace/tokenmax/bot-island/reports/fleet-health-2026-10-07.html"
+    },
+    {
+     "kind": "doctor",
+     "quote": "Jim: “Jim daily interest note” ≈ 48 agent-minutes/week",
+     "label": null,
+     "source": "/workspace/tokenmax/bot-island/reports/fleet-health-2026-10-07.html"
+    },
+    {
+     "kind": "profile",
+     "bot": "Dwight",
+     "quote": "Prefer Ultra-capable models / auto",
+     "source": "~/agent-data/agents/d0afda46-7287-40c1-b934-70ab9225584e/profile.json"
+    }
+   ],
+   "rubric": [
+    {
+     "text": "Cost is measured per routine",
+     "status": "yes",
+     "because": "Fleet Doctor routine cost table"
+    },
+    {
+     "text": "Budget rules are written into prompts",
+     "status": "yes",
+     "because": "Kelly (X credits), TokenMax (no overage)"
+    },
+    {
+     "text": "The single biggest waste is fixed",
+     "status": "no",
+     "because": "The duplicate archive newspaper (≈108 agent-min/week) is still enabled"
+    },
+    {
+     "text": "Effort/model tier is matched to each job",
+     "status": "partial",
+     "because": "Only Dwight states a model preference; routines carry no effort tier"
+    },
+    {
+     "text": "Unused included usage gets captured",
+     "status": "yes",
+     "because": "TokenMax"
+    }
+   ],
+   "next": "Pause the archive Family Times routine first. It's the largest line on the cost table and duplicates the live newspaper. Then cache the gather step for Oscar's bills run and Jim's note (reuse yesterday's sources, fetch only what's new).",
+   "score": 3.5
+  },
+  {
+   "id": "scripts",
+   "name": "Computer use → scripts",
+   "icon": "🖱️",
+   "what": "Driving a browser by screenshots works, but it's the slowest and priciest way to read a page. Once a click-path repeats, have the agent turn it into a script or use a connector, and keep screen-driving for the truly one-off stuff.",
+   "teach": [
+    {
+     "post": "2094824011427373415",
+     "handle": "SamSokolin",
+     "name": "Sam Sokolin",
+     "url": "https://x.com/SamSokolin/status/2094824011427373415",
+     "date": "2026-09-01",
+     "quote": "Use Grok Bot to reverse-engineer repeated browser computer-use tasks into scripts",
+     "is_note": true,
+     "sources": [
+      "jim/x-bookmarks-2026-09-10.json"
+     ],
+     "views": null,
+     "approx": false
+    },
+    {
+     "post": "2100817479522234503",
+     "handle": "kloss_xyz",
+     "name": "klöss",
+     "url": "https://x.com/kloss_xyz/status/2100817479522234503",
+     "date": "2026-09-18",
+     "quote": "one of the highest ROI use cases for Codex or Grok Bot has nothing to do with writing code it has to do with computer use",
+     "is_note": false,
+     "sources": [
+      "bookmarks-scroll.yml",
+      "bookmarks-scroll2.yml",
+      "bm3.yml",
+      "x-scrape-2026-09-21.json.log"
+     ],
+     "views": 8683,
+     "approx": false
+    }
+   ],
+   "fleet": [
+    {
+     "kind": "fact",
+     "text": "Computer-use sessions logged by bot: Char Tutor 21, Vic Tutor 20, Jim 14, Pam 4, Michael 4 (63 total).",
+     "source": "/workspace/tokenmax/bot-island/data/fleet.json",
+     "how": "events where type = computer_use_session"
+    },
+    {
+     "kind": "doctor",
+     "quote": "Jim: 50 min of screen-driving (computer use)",
+     "label": null,
+     "source": "/workspace/tokenmax/bot-island/reports/fleet-health-2026-10-07.html"
+    },
+    {
+     "kind": "doctor",
+     "quote": "Vic Tutor: 40 min of screen-driving (computer use)",
+     "label": null,
+     "source": "/workspace/tokenmax/bot-island/reports/fleet-health-2026-10-07.html"
+    },
+    {
+     "kind": "skill",
+     "skill": "PowerSchool own-browser grades",
+     "quote": "Concurrent Char + Vic sessions kick each other and force Boyd to re-enter credentials.",
+     "source": "~/agent-data/workflows/powerschool-own-browser-grades/SKILL.md"
+    },
+    {
+     "kind": "profile",
+     "bot": "Oscar",
+     "quote": "Prefer read-only aggregation (Plaid-style or official exports) over storing passwords.",
+     "source": "~/agent-data/agents/5ea76ec0-2e44-46be-993a-11bc6ba30958/profile.json"
+    }
+   ],
+   "rubric": [
+    {
+     "text": "Repeated browser jobs are written down as skills",
+     "status": "yes",
+     "because": "PowerSchool own-browser grades"
+    },
+    {
+     "text": "Session conflicts are handled",
+     "status": "yes",
+     "because": "One-login-per-household rule"
+    },
+    {
+     "text": "Repeated pulls are converted to scripts",
+     "status": "no",
+     "because": "PowerSchool and X checks are still screen-driven"
+    },
+    {
+     "text": "Screen-driving minutes are tracked and falling",
+     "status": "partial",
+     "because": "Measured by Fleet Doctor, no trend yet"
+    },
+    {
+     "text": "Connectors/exports preferred over screens",
+     "status": "partial",
+     "because": "Oscar says so; tutors and Jim still drive screens"
+    }
+   ],
+   "next": "Have Dwight (or a Cloud Agent) turn the PowerSchool grade pull into a saved script that both tutors call, with one login and JSON output. Do the same for Jim's X bookmark check. Those are the two biggest screen-driving lines.",
+   "score": 3.0
+  },
+  {
+   "id": "briefs",
+   "name": "Proactive briefs, quiet when nothing",
+   "icon": "📬",
+   "what": "The best agents show up before you ask (a morning brief, a daily paper, a podcast pick) and stay silent when there's nothing worth saying. Proactive plus quiet is what makes a fleet feel like staff instead of notifications.",
+   "teach": [
+    {
+     "post": "2090490444224331787",
+     "handle": "monokern",
+     "name": "monokern",
+     "url": "https://x.com/monokern/status/2090490444224331787",
+     "date": "2026-08-20",
+     "quote": "How to Build a 24/7 Autonomous Agent Team That Runs While You Sleep",
+     "is_note": false,
+     "sources": [
+      "jim/x-bookmarks-2026-08-27.json"
+     ],
+     "views": 1000000,
+     "approx": true
+    },
+    {
+     "post": "2092291417737400799",
+     "handle": "GrokBotDev",
+     "name": "GrokBot.dev",
+     "url": "https://x.com/GrokBotDev/status/2092291417737400799",
+     "date": "2026-08-25",
+     "quote": "Paste one prompt into your Grok @bot",
+     "is_note": false,
+     "sources": [
+      "jim/x-bookmarks-2026-08-27.json"
+     ],
+     "views": null,
+     "approx": false
+    },
+    {
+     "post": "2101033599319613533",
+     "handle": "petergyang",
+     "name": "Peter Yang",
+     "url": "https://x.com/petergyang/status/2101033599319613533",
+     "date": "2026-09-18",
+     "quote": "Here's my new video where I walk through 10 of my favorite Muse use cases",
+     "is_note": false,
+     "sources": [
+      "bookmarks-full.yml",
+      "bookmarks-reload.yml",
+      "bookmarks-scroll.yml",
+      "bookmarks-scroll2.yml",
+      "bookmarks.yml",
+      "bookmarks2.yml",
+      "x-scrape-2026-09-21.json.log"
+     ],
+     "views": 431803,
+     "approx": false
+    }
+   ],
+   "fleet": [
+    {
+     "kind": "profile",
+     "bot": "Brief",
+     "quote": "Stay quiet if there is truly nothing new or urgent.",
+     "source": "~/agent-data/agents/84ee99ac-e314-4642-a27b-89b81a591547/profile.json"
+    },
+    {
+     "kind": "profile",
+     "bot": "Pods",
+     "quote": "check his watched channels for new uploads since the last run",
+     "source": "~/agent-data/agents/ed1121b7-dd17-4061-880f-70ebed7c8250/profile.json"
+    },
+    {
+     "kind": "skill",
+     "skill": "Transcript healthcheck",
+     "quote": "Never send \"(no change.)\".",
+     "source": "~/agent-data/workflows/transcript-healthcheck/SKILL.md"
+    },
+    {
+     "kind": "fact",
+     "text": "9 of 15 configured bots carry a quiet-when-nothing rule.",
+     "source": "profile.json ×15",
+     "how": "regex \"quiet when|stay quiet|stay silent|send no message\""
+    },
+    {
+     "kind": "doctor",
+     "quote": "Daily outputs on time (4 of 4)",
+     "label": null,
+     "source": "/workspace/tokenmax/bot-island/reports/fleet-health-2026-10-07.html"
+    },
+    {
+     "kind": "doctor",
+     "quote": "Brief: “Morning attention brief” missed 2 of 4 scheduled runs",
+     "label": null,
+     "source": "/workspace/tokenmax/bot-island/reports/fleet-health-2026-10-07.html"
+    }
+   ],
+   "rubric": [
+    {
+     "text": "Daily proactive briefs exist",
+     "status": "yes",
+     "because": "Brief, Pods, Family Times, Jim, Path"
+    },
+    {
+     "text": "Most bots have a quiet-when-nothing rule",
+     "status": "yes",
+     "because": "9/15"
+    },
+    {
+     "text": "Daily outputs land on time",
+     "status": "yes",
+     "because": "Fleet Doctor: 4 of 4 on time"
+    },
+    {
+     "text": "No missed scheduled briefs",
+     "status": "no",
+     "because": "Brief missed 2 of 4"
+    },
+    {
+     "text": "Each audience gets one brief, not overlapping ones",
+     "status": "no",
+     "because": "Two Family Times bots"
+    }
+   ],
+   "next": "Fix Brief's missed runs first (check the schedule and quiet hours). Then add a one-line liveness rule: if the 8:00 brief hasn't landed by 8:20 on a weekday, Michael says so. A missed brief should never be silent.",
+   "score": 3
+  }
+ ],
+ "upgrades": [
+  {
+   "title": "Pause the duplicate Family Times archive routine",
+   "pattern": [
+    "cost",
+    "specialists",
+    "briefs"
+   ],
+   "effort": "S",
+   "minutes": "10 min",
+   "impact": "≈108 agent-minutes/week back (the largest line on the cost table) and one owner for the newspaper",
+   "evidence": "Fleet Doctor: duplication + token-heavy findings",
+   "how": "Confirm the live Boyd Family Times bot is current, then pause \"Morning Boyd Family Times\" on the archive bot.",
+   "rank": 1
+  },
+  {
+   "title": "Delete Michael's two paused routine copies",
+   "pattern": [
+    "front-door",
+    "specialists"
+   ],
+   "effort": "S",
+   "minutes": "5 min",
+   "impact": "Removes the risk of re-enabling a duplicate brief or interest note",
+   "evidence": "Fleet Doctor: 2 leftover paused copies",
+   "how": "Delete \"Jim daily interest note\" and \"Morning attention brief\" from Michael. Jim and Brief stay the single owners.",
+   "rank": 2
+  },
+  {
+   "title": "Fix Brief's missed runs and add a liveness alarm",
+   "pattern": [
+    "briefs",
+    "healthchecks"
+   ],
+   "effort": "S",
+   "minutes": "30 min",
+   "impact": "The morning brief stops silently skipping days",
+   "evidence": "Fleet Doctor: missed 2 of 4 scheduled runs",
+   "how": "Check Brief's 8:00 schedule and quiet hours. Have Michael flag it if no brief has landed by 8:20 on a weekday.",
+   "rank": 3
+  },
+  {
+   "title": "Merge or stagger Oscar's back-to-back morning runs",
+   "pattern": [
+    "cost",
+    "routines-listeners"
+   ],
+   "effort": "S",
+   "minutes": "15 min",
+   "impact": "Stops re-gathering the same context twice in 20 minutes",
+   "evidence": "Fleet Doctor: 8:31 / 8:45 / 8:15 runs overlap",
+   "how": "Fold the Kia statement watch into the 8:45 bills run, or make it a mail listener (see below).",
+   "rank": 4
+  },
+  {
+   "title": "Shared \"homework check-in\" skill for both tutors",
+   "pattern": [
+    "skills"
+   ],
+   "effort": "M",
+   "minutes": "45 min",
+   "impact": "Fixes land once instead of twice. Each tutor keeps only its kid-specific rules.",
+   "evidence": "Fleet Doctor: tutor routines overlap 49%",
+   "how": "Ask Dr. EggBot to factor out the shared rules into a workflow skill and link it from both routines.",
+   "rank": 5
+  },
+  {
+   "title": "First listener: a mail trigger for the Kia statement watch",
+   "pattern": [
+    "routines-listeners",
+    "cost"
+   ],
+   "effort": "M",
+   "minutes": "1–2 h",
+   "impact": "Replaces a 5×/week poll with a wake only when the statement arrives",
+   "evidence": "All 118 logged runs are cron. Routine healthcheck says \"Prefer an event listener\"",
+   "how": "Use a Gmail-triggered or webhook routine (Make Bot UI skill) that wakes Oscar with the message.",
+   "rank": 6
+  },
+  {
+   "title": "Printer-health preflight for the Family Times",
+   "pattern": [
+    "verification",
+    "briefs"
+   ],
+   "effort": "M",
+   "minutes": "1 h",
+   "impact": "Fewer PDF-only mornings, and Boyd hears when printing is skipped",
+   "evidence": "Fleet Doctor: 4 of the last 7 editions PDF-only",
+   "how": "Before rendering, wake/ping the HP. Fall back to a second printer. Say \"PDF only today\" when skipped.",
+   "rank": 7
+  },
+  {
+   "title": "One shared \"household & decisions\" memory note",
+   "pattern": [
+    "memory"
+   ],
+   "effort": "M",
+   "minutes": "1 h",
+   "impact": "Household facts fixed once for Oscar, Pam, Path and the tutors",
+   "evidence": "Household facts are duplicated in the Oscar and Pam personas",
+   "how": "Keep a single Notion or box note, and point each persona at it instead of carrying its own copy.",
+   "rank": 8
+  },
+  {
+   "title": "Turn the PowerSchool and X checks into saved scripts",
+   "pattern": [
+    "scripts",
+    "cost"
+   ],
+   "effort": "L",
+   "minutes": "half day",
+   "impact": "Cuts the two biggest screen-driving lines (Jim 50 min, Vic Tutor 40 min)",
+   "evidence": "Fleet Doctor computer-use findings. 63 computer-use sessions logged.",
+   "how": "Have Dwight launch a Cloud Agent to script the PowerSchool pull (one login, JSON out) that both tutors call.",
+   "rank": 9
+  },
+  {
+   "title": "Arena pilot with Dwight + weekly eval scores",
+   "pattern": [
+    "arena",
+    "verification",
+    "healthchecks"
+   ],
+   "effort": "M",
+   "minutes": "1–2 h + agent time",
+   "impact": "Real use of the unused Cursor pool and a quality trend you can see",
+   "evidence": "No arena or eval runs logged. Dwight last active Sep 10.",
+   "how": "One real task → 3 parallel Cloud Agents with pstack arena → reasoned pick. Log a weekly 3-question eval score next to Fleet Doctor.",
+   "rank": 10
+  }
+ ],
+ "facts": {
+  "configured": 15,
+  "anti": [
+   "Boyd Family Times",
+   "Brief",
+   "Char Tutor",
+   "Dwight",
+   "Path",
+   "Pods",
+   "Ryan",
+   "Vic Tutor"
+  ],
+  "only": [
+   "Boyd Family Times",
+   "Char Tutor",
+   "Dwight",
+   "Path",
+   "Pods",
+   "Ryan",
+   "TokenMax",
+   "Vic Tutor"
+  ],
+  "quiet": [
+   "Brief",
+   "Char Tutor",
+   "Dwight",
+   "Michael",
+   "Path",
+   "Pods",
+   "Ryan",
+   "TokenMax",
+   "Vic Tutor"
+  ],
+  "noinv": [
+   "Boyd Family Times",
+   "Char Tutor",
+   "Jim",
+   "Oscar",
+   "Pam",
+   "Path",
+   "Pods",
+   "Ryan",
+   "Vic Tutor"
+  ],
+  "mentions_michael": [
+   "Boyd Family Times",
+   "Brief",
+   "Dwight",
+   "Jim",
+   "Kelly",
+   "Oscar",
+   "Pam",
+   "Ryan",
+   "TokenMax"
+  ],
+  "routines": 16,
+  "enabled": 14,
+  "runs": 118,
+  "ok_runs": 118,
+  "trig": {
+   "schedule": 118
+  },
+  "msgs": 223,
+  "via_m": 194,
+  "cu": {
+   "Pam": 4,
+   "Michael": 4,
+   "Jim": 14,
+   "Vic Tutor": 20,
+   "Char Tutor": 21
+  },
+  "mem": 11,
+  "skills": 9
+ },
+ "fleet": [
+  {
+   "name": "Boyd Family Times",
+   "title": "",
+   "anti": true,
+   "only": true,
+   "quiet": false,
+   "routines": []
+  },
+  {
+   "name": "Brief",
+   "title": "Morning Brief",
+   "anti": true,
+   "only": false,
+   "quiet": true,
+   "routines": [
+    "Morning attention brief"
+   ]
+  },
+  {
+   "name": "Char Tutor",
+   "title": "8th Grade Tutor",
+   "anti": true,
+   "only": true,
+   "quiet": true,
+   "routines": [
+    "Char weeknight homework check-in"
+   ]
+  },
+  {
+   "name": "Dr. EggBot",
+   "title": "Bot Creator",
+   "anti": false,
+   "only": false,
+   "quiet": false,
+   "routines": [
+    "routine-healthcheck",
+    "transcript-healthcheck"
+   ]
+  },
+  {
+   "name": "Dwight",
+   "title": "Code Monkey",
+   "anti": true,
+   "only": true,
+   "quiet": true,
+   "routines": []
+  },
+  {
+   "name": "Jim",
+   "title": "Interests",
+   "anti": false,
+   "only": false,
+   "quiet": false,
+   "routines": [
+    "Bill Simmons Sunday 107 fifth pick",
+    "Daily podcast listen brief",
+    "Jim daily interest note"
+   ]
+  },
+  {
+   "name": "Kelly",
+   "title": "Trends",
+   "anti": false,
+   "only": false,
+   "quiet": false,
+   "routines": []
+  },
+  {
+   "name": "Michael",
+   "title": "Chief of Staff",
+   "anti": false,
+   "only": false,
+   "quiet": true,
+   "routines": []
+  },
+  {
+   "name": "Oscar",
+   "title": "Finances",
+   "anti": false,
+   "only": false,
+   "quiet": false,
+   "routines": [
+    "Due-soon bills and money surprises",
+    "Watch for Kia Finance statement",
+    "Weekly household cash snapshot"
+   ]
+  },
+  {
+   "name": "Pam",
+   "title": "Family Logistics",
+   "anti": false,
+   "only": false,
+   "quiet": false,
+   "routines": [
+    "Weekday family calendar scan"
+   ]
+  },
+  {
+   "name": "Path",
+   "title": "High School Path",
+   "anti": true,
+   "only": true,
+   "quiet": true,
+   "routines": []
+  },
+  {
+   "name": "Pods",
+   "title": "",
+   "anti": true,
+   "only": true,
+   "quiet": true,
+   "routines": []
+  },
+  {
+   "name": "Ryan",
+   "title": "Entrepreneur",
+   "anti": true,
+   "only": true,
+   "quiet": true,
+   "routines": [
+    "Weekly idea digest"
+   ]
+  },
+  {
+   "name": "TokenMax",
+   "title": "",
+   "anti": false,
+   "only": true,
+   "quiet": true,
+   "routines": []
+  },
+  {
+   "name": "Vic Tutor",
+   "title": "6th Grade Tutor",
+   "anti": true,
+   "only": true,
+   "quiet": true,
+   "routines": [
+    "Vic weeknight homework check-in"
+   ]
+  }
+ ],
+ "sources": {
+  "atlas": "/workspace/tokenmax/bookmark-atlas/data/atlas.json",
+  "profiles": "/home/box/agent-data/agents/*/profile.json (16 files)",
+  "skills": "/home/box/agent-data/workflows/*/SKILL.md (9 files)",
+  "fleet": "/workspace/tokenmax/bot-island/data/fleet.json",
+  "doctor": "/workspace/tokenmax/bot-island/reports/fleet-health-2026-10-07.html",
+  "logs_end": "2026-09-16"
+ },
+ "max_score": 5
+}

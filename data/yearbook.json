@@ -1,0 +1,2595 @@
+{
+ "meta": {
+  "generatedAt": "2026-10-07T21:34:33.689627Z",
+  "fleetGeneratedAt": "2026-10-07T19:55:50.003750Z"
+ },
+ "sources": {
+  "fleet": {
+   "path": "/workspace/tokenmax/bot-island/data/fleet.json",
+   "archived": "data/sources/fleet.json",
+   "sha256": "036c21df310208899dc99c0cc73335898f3de24923414f343ed0985069ff9a04",
+   "mtime": "2026-10-07T19:55:50.026180+00:00"
+  },
+  "playbook": {
+   "path": "/workspace/tokenmax/agent-playbook/data/playbook.json",
+   "archived": "data/sources/playbook.json",
+   "sha256": "f68c849b7fbe3fdd7717d72719a73855a81472d0d9f84090e0e99db1e5dd466c",
+   "mtime": "2026-10-07T20:41:25.754969+00:00"
+  },
+  "strips": {
+   "path": "/workspace/tokenmax/fleet-funnies/data/strips.json",
+   "archived": "data/sources/strips.json",
+   "sha256": "2a1d7cafdc43a17cbfef35e6514b8d175f8a2fb8460180d51f6ff761910e3fbc",
+   "mtime": "2026-10-07T20:57:37.044592+00:00"
+  },
+  "hub": {
+   "path": "/workspace/tokenmax/fleet-funnies/data/hub-snapshot.json",
+   "archived": "data/sources/hub-snapshot.json",
+   "sha256": "9cb21112c094e8fb09a1d6d16366a0f07b187b90eee9b056e9788c61d06ca2d0",
+   "mtime": "2026-10-07T20:57:35.808595+00:00"
+  },
+  "profiles": {
+   "path": "/home/box/agent-data/agents/*/profile.json",
+   "archived": "data/sources/profiles/",
+   "count": 16
+  }
+ },
+ "class": {
+  "bots": 16,
+  "withProfile": 15,
+  "events": 3960,
+  "byType": {
+   "boyd_msg": 113,
+   "mcp_tool_call": 1752,
+   "agent_msg": 223,
+   "shell_command": 1304,
+   "browser_navigation": 419,
+   "computer_use_session": 63,
+   "dated_output": 27,
+   "file_write": 58,
+   "routine_touch": 1
+  },
+  "messagesBetweenBots": 223,
+  "messagePairs": 15,
+  "boydMsgs": 113,
+  "routines": 16,
+  "routinesEnabled": 14,
+  "runs": 118,
+  "runsOk": 118,
+  "firstEvent": "2026-08-20T23:59:41.867000Z",
+  "lastEvent": "2026-10-07T19:55:19.065486Z",
+  "busiestDay": "2026-08-20",
+  "busiestDayCount": 402,
+  "activeDays": 49,
+  "logsNote": "Activity logs (tool calls, messages, browsing) run through 2026-09-16T09:30:40.555Z; file writes and outputs continue to 2026-10-07T19:55:19.065486Z.",
+  "colors": [
+   [
+    "gray",
+    4
+   ],
+   [
+    "red",
+    3
+   ],
+   [
+    "yellow",
+    2
+   ],
+   [
+    "blue",
+    2
+   ],
+   [
+    "green",
+    1
+   ],
+   [
+    "orange",
+    1
+   ],
+   [
+    "magenta",
+    1
+   ],
+   [
+    "cyan",
+    1
+   ],
+   [
+    "violet",
+    1
+   ]
+  ],
+  "eggs": [
+   "New Bot"
+  ],
+  "alumni": [
+   "Boyd Family Times (archive)"
+  ],
+  "comicStrips": 11
+ },
+ "awards": [
+  {
+   "title": "Best Duo",
+   "winner": "Jim & Michael",
+   "stat": "62 messages between them \u2014 the most of any pair",
+   "hex": [
+    "#3b82f6",
+    "#ef4444"
+   ],
+   "key": "pair",
+   "value": 62
+  },
+  {
+   "title": "Biggest Toolbox",
+   "winner": "Michael",
+   "hex": [
+    "#ef4444"
+   ],
+   "stat": "Used 9 different apps",
+   "key": "apps",
+   "value": 9
+  },
+  {
+   "title": "Most Messages from Boyd",
+   "winner": "Michael",
+   "hex": [
+    "#ef4444"
+   ],
+   "stat": "57 messages from Boyd in the logs",
+   "key": "boydMsgs",
+   "value": 57
+  },
+  {
+   "title": "Marathon Day",
+   "winner": "Michael",
+   "hex": [
+    "#ef4444"
+   ],
+   "stat": "177 logged actions in a single day",
+   "key": "busiestDayCount",
+   "value": 177
+  },
+  {
+   "title": "Early Bird",
+   "winner": "Boyd Family Times",
+   "hex": [
+    "#94a3b8"
+   ],
+   "stat": "Typical activity time: 5:16 AM ET",
+   "key": "medianHour",
+   "value": 5.27
+  },
+  {
+   "title": "Night Owl",
+   "winner": "Jim",
+   "hex": [
+    "#3b82f6"
+   ],
+   "stat": "Typical activity time: 8:09 PM ET",
+   "key": "medianHour",
+   "value": 20.15
+  },
+  {
+   "title": "Speed Demon",
+   "winner": "Vic Tutor",
+   "hex": [
+    "#f97316"
+   ],
+   "stat": "Median routine run: 0.9 min",
+   "key": "medianRunMin",
+   "value": 0.9
+  },
+  {
+   "title": "Comic-Strip Star",
+   "winner": "Michael & Jim",
+   "hex": [
+    "#ef4444",
+    "#3b82f6"
+   ],
+   "stat": "Stars in 6 of the 11 Fleet Funnies strips",
+   "key": "comicStrips",
+   "value": 6
+  },
+  {
+   "title": "Web Explorer",
+   "winner": "Vic Tutor",
+   "hex": [
+    "#f97316"
+   ],
+   "stat": "116 page visits",
+   "key": "browse",
+   "value": 116
+  },
+  {
+   "title": "Terminal Champion",
+   "winner": "Jim",
+   "hex": [
+    "#3b82f6"
+   ],
+   "stat": "277 shell commands",
+   "key": "shell",
+   "value": 277
+  },
+  {
+   "title": "Most Hands-On",
+   "winner": "Char Tutor",
+   "hex": [
+    "#8b5cf6"
+   ],
+   "stat": "21 computer-use sessions",
+   "key": "computerUse",
+   "value": 21
+  },
+  {
+   "title": "Perfect Record (whole class)",
+   "winner": "Every routine",
+   "hex": [
+    "#22c55e"
+   ],
+   "stat": "118 of 118 logged routine runs finished OK",
+   "key": "runsOk",
+   "value": 118
+  },
+  {
+   "title": "Busiest Day of the Year",
+   "winner": "Thu Aug 20",
+   "hex": [
+    "#f59e0b"
+   ],
+   "stat": "402 logged events fleet-wide that day (ET)",
+   "key": "busiestDayCount",
+   "value": 402
+  },
+  {
+   "title": "Class Color",
+   "winner": "Red",
+   "hex": [
+    "#ef4444"
+   ],
+   "stat": "3 of 15 classmates wear it on Bot Island (Michael, Ryan, Dr. EggBot)",
+   "key": "color",
+   "value": 3
+  }
+ ],
+ "bots": [
+  {
+   "id": "784bedfc-74d6-45a0-a291-762ff05bb0c6",
+   "name": "Boyd Family Times",
+   "hasProfile": true,
+   "title": "",
+   "job": "The Boyd Family Times \u2014 Boyd's daily household newspaper.",
+   "jobSource": "profile.json (784bedfc)",
+   "color": "gray",
+   "hex": "#94a3b8",
+   "shape": "circle",
+   "building": "press",
+   "routineNames": [],
+   "schedule": [],
+   "paused": [],
+   "rhythm": [
+    "observed output ~5:16 AM (4 days)"
+   ],
+   "playbook": {
+    "only": true,
+    "quiet": false
+   },
+   "stats": {
+    "toolCalls": 0,
+    "shell": 0,
+    "browse": 0,
+    "computerUse": 0,
+    "fileWrites": 25,
+    "outputs": 20,
+    "boydMsgs": 0,
+    "sent": 0,
+    "received": 0,
+    "partners": 0,
+    "apps": 0,
+    "topApp": null,
+    "topAppCalls": 0,
+    "hosts": 0,
+    "routines": 0,
+    "routinesEnabled": 0,
+    "runs": 0,
+    "runsOk": 0,
+    "medianRunMin": null,
+    "artifactWrites30d": 25,
+    "activities": 45,
+    "activeDays": 24,
+    "busiestDay": "2026-10-06",
+    "busiestDayCount": 8,
+    "medianHour": 5.27,
+    "firstSeen": "2026-09-14T09:16:00Z",
+    "lastSeen": "2026-10-07T09:31:21.906908Z",
+    "comicStrips": 5,
+    "hourHist": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     45,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "appCalls": {},
+    "sentTo": {},
+    "spanMinutes": 33135.4,
+    "firstSeenDate": "Sep 14",
+    "medianTime": "5:16 AM ET"
+   },
+   "superlative": {
+    "text": "Most likely to make headlines",
+    "stat": "20 dated editions logged",
+    "facts": [
+     {
+      "key": "outputs",
+      "value": 20
+     }
+    ],
+    "rankText": "#1 in the class",
+    "title": "Most likely to make headlines"
+   },
+   "motto": {
+    "text": "All the news that fits, before sunrise.",
+    "stat": "Typical activity time: 5:16 AM ET",
+    "facts": [
+     {
+      "key": "medianTime",
+      "value": "5:16 AM ET"
+     }
+    ],
+    "rankText": "#1 in the class"
+   },
+   "signatures": []
+  },
+  {
+   "id": "84ee99ac-e314-4642-a27b-89b81a591547",
+   "name": "Brief",
+   "hasProfile": true,
+   "title": "Morning Brief",
+   "job": "Prepares Boyd's weekday morning attention brief.",
+   "jobSource": "profile.json (84ee99ac)",
+   "color": "blue",
+   "hex": "#3b82f6",
+   "shape": "wedge",
+   "building": "postoffice",
+   "routineNames": [
+    "Morning attention brief"
+   ],
+   "schedule": [
+    "Morning attention brief: 8:00 AM weekdays"
+   ],
+   "paused": [],
+   "rhythm": [],
+   "playbook": {
+    "only": false,
+    "quiet": true
+   },
+   "stats": {
+    "toolCalls": 61,
+    "shell": 1,
+    "browse": 0,
+    "computerUse": 0,
+    "fileWrites": 0,
+    "outputs": 0,
+    "boydMsgs": 0,
+    "sent": 1,
+    "received": 1,
+    "partners": 1,
+    "apps": 3,
+    "topApp": "Calendar",
+    "topAppCalls": 29,
+    "hosts": 0,
+    "routines": 1,
+    "routinesEnabled": 1,
+    "runs": 3,
+    "runsOk": 3,
+    "medianRunMin": 2.2,
+    "artifactWrites30d": 0,
+    "activities": 66,
+    "activeDays": 4,
+    "busiestDay": "2026-09-10",
+    "busiestDayCount": 26,
+    "medianHour": 8.45,
+    "firstSeen": "2026-09-08T22:40:43.587000Z",
+    "lastSeen": "2026-09-14T12:44:56.716Z",
+    "comicStrips": 4,
+    "hourHist": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     65,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "appCalls": {
+     "Gmail": 10,
+     "Calendar": 29,
+     "Slack": 22
+    },
+    "sentTo": {
+     "Dr. EggBot": 1
+    },
+    "spanMinutes": 8044.2,
+    "firstSeenDate": "Sep 8",
+    "medianTime": "8:27 AM ET"
+   },
+   "superlative": {
+    "text": "Most likely to read your calendar before you do",
+    "stat": "29 of its 61 tool calls were Calendar",
+    "facts": [
+     {
+      "key": "app:Calendar",
+      "value": 29
+     },
+     {
+      "key": "toolCalls",
+      "value": 61
+     }
+    ],
+    "rankText": null,
+    "title": "Most likely to read your calendar before you do"
+   },
+   "motto": {
+    "text": "Everything you need by 8 AM.",
+    "stat": "3 of 3 morning brief runs finished OK",
+    "facts": [
+     {
+      "key": "runsOk",
+      "value": 3
+     },
+     {
+      "key": "runs",
+      "value": 3
+     }
+    ],
+    "rankText": null
+   },
+   "signatures": [
+    {
+     "from": "Dr. EggBot",
+     "fromId": "759c205a-40a5-4e74-9620-3c04714824f4",
+     "hex": "#ef4444",
+     "toYou": 1,
+     "fromYou": 1,
+     "total": 2,
+     "first": "2026-09-08T22:40:18.310000Z",
+     "busiestDay": "2026-09-08",
+     "busiestDayCount": 2,
+     "daysTalked": 1
+    }
+   ]
+  },
+  {
+   "id": "ff5dfcd2-09b9-49dd-952f-14893da73ab0",
+   "name": "Char Tutor",
+   "hasProfile": true,
+   "title": "8th Grade Tutor",
+   "job": "Homework tutor for Charlotte Boyd only (8th grade, ~13).",
+   "jobSource": "profile.json (ff5dfcd2)",
+   "color": "violet",
+   "hex": "#8b5cf6",
+   "shape": "cloud",
+   "building": "school",
+   "routineNames": [
+    "Char weeknight homework check-in"
+   ],
+   "schedule": [
+    "Char weeknight homework check-in: 5:45 PM daily"
+   ],
+   "paused": [],
+   "rhythm": [],
+   "playbook": {
+    "only": true,
+    "quiet": true
+   },
+   "stats": {
+    "toolCalls": 0,
+    "shell": 19,
+    "browse": 112,
+    "computerUse": 21,
+    "fileWrites": 0,
+    "outputs": 0,
+    "boydMsgs": 2,
+    "sent": 14,
+    "received": 15,
+    "partners": 3,
+    "apps": 0,
+    "topApp": null,
+    "topAppCalls": 0,
+    "hosts": 5,
+    "routines": 1,
+    "routinesEnabled": 1,
+    "runs": 7,
+    "runsOk": 7,
+    "medianRunMin": 1.2,
+    "artifactWrites30d": 0,
+    "activities": 175,
+    "activeDays": 8,
+    "busiestDay": "2026-09-15",
+    "busiestDayCount": 70,
+    "medianHour": 19.35,
+    "firstSeen": "2026-09-08T23:25:15.239000Z",
+    "lastSeen": "2026-09-16T01:35:51.603000Z",
+    "comicStrips": 2,
+    "hourHist": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     11,
+     0,
+     0,
+     0,
+     0,
+     0,
+     2,
+     0,
+     25,
+     0,
+     0,
+     0,
+     70,
+     28,
+     30,
+     9,
+     0
+    ],
+    "appCalls": {},
+    "sentTo": {
+     "Dr. EggBot": 2,
+     "Michael": 8,
+     "Vic Tutor": 4
+    },
+    "spanMinutes": 10210.6,
+    "firstSeenDate": "Sep 8",
+    "medianTime": "7:21 PM ET"
+   },
+   "superlative": {
+    "text": "Most likely to pull up a chair and study with you",
+    "stat": "21 computer-use sessions",
+    "facts": [
+     {
+      "key": "computerUse",
+      "value": 21
+     }
+    ],
+    "rankText": "#1 in the class",
+    "title": "Most likely to pull up a chair and study with you"
+   },
+   "motto": {
+    "text": "Homework first, then high fives.",
+    "stat": "7 of 7 weeknight check-ins finished OK",
+    "facts": [
+     {
+      "key": "runsOk",
+      "value": 7
+     },
+     {
+      "key": "runs",
+      "value": 7
+     }
+    ],
+    "rankText": null
+   },
+   "signatures": [
+    {
+     "from": "Michael",
+     "fromId": "4feb1fc5-075b-4294-a694-3fa562e5785b",
+     "hex": "#ef4444",
+     "toYou": 11,
+     "fromYou": 8,
+     "total": 19,
+     "first": "2026-09-10T00:28:12.894000Z",
+     "busiestDay": "2026-09-09",
+     "busiestDayCount": 11,
+     "daysTalked": 3
+    },
+    {
+     "from": "Vic Tutor",
+     "fromId": "7e4990fe-38aa-4d6d-aa6b-c87baad5f8d1",
+     "hex": "#f97316",
+     "toYou": 2,
+     "fromYou": 4,
+     "total": 6,
+     "first": "2026-09-16T01:32:10.816000Z",
+     "busiestDay": "2026-09-15",
+     "busiestDayCount": 6,
+     "daysTalked": 1
+    },
+    {
+     "from": "Dr. EggBot",
+     "fromId": "759c205a-40a5-4e74-9620-3c04714824f4",
+     "hex": "#ef4444",
+     "toYou": 2,
+     "fromYou": 2,
+     "total": 4,
+     "first": "2026-09-08T23:24:44.523000Z",
+     "busiestDay": "2026-09-08",
+     "busiestDayCount": 2,
+     "daysTalked": 2
+    },
+    {
+     "from": "Boyd",
+     "fromId": "boyd",
+     "hex": "#111827",
+     "boyd": true,
+     "toYou": 2,
+     "fromYou": null,
+     "total": 2
+    }
+   ]
+  },
+  {
+   "id": "759c205a-40a5-4e74-9620-3c04714824f4",
+   "name": "Dr. EggBot",
+   "hasProfile": true,
+   "title": "Bot Creator",
+   "job": "Designs high-quality Grok Bots. Asks a few preference questions, then creates them with CreateAgent.",
+   "jobSource": "profile.json (759c205a)",
+   "color": "red",
+   "hex": "#ef4444",
+   "shape": "teardrop",
+   "building": "hatchery",
+   "routineNames": [
+    "routine-healthcheck",
+    "transcript-healthcheck"
+   ],
+   "schedule": [
+    "routine-healthcheck: 6:35 AM Mondays",
+    "transcript-healthcheck: 6:30 AM weekdays"
+   ],
+   "paused": [],
+   "rhythm": [],
+   "playbook": {
+    "only": false,
+    "quiet": false
+   },
+   "stats": {
+    "toolCalls": 0,
+    "shell": 261,
+    "browse": 0,
+    "computerUse": 0,
+    "fileWrites": 0,
+    "outputs": 0,
+    "boydMsgs": 10,
+    "sent": 9,
+    "received": 9,
+    "partners": 7,
+    "apps": 0,
+    "topApp": null,
+    "topAppCalls": 0,
+    "hosts": 0,
+    "routines": 2,
+    "routinesEnabled": 2,
+    "runs": 9,
+    "runsOk": 9,
+    "medianRunMin": 5.3,
+    "artifactWrites30d": 0,
+    "activities": 289,
+    "activeDays": 8,
+    "busiestDay": "2026-09-14",
+    "busiestDayCount": 58,
+    "medianHour": 6.7,
+    "firstSeen": "2026-09-04T21:04:53.304000Z",
+    "lastSeen": "2026-09-15T11:12:23.034Z",
+    "comicStrips": 1,
+    "hourHist": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     240,
+     6,
+     0,
+     0,
+     0,
+     4,
+     0,
+     4,
+     0,
+     0,
+     0,
+     20,
+     11,
+     4,
+     0,
+     0,
+     0,
+     0
+    ],
+    "appCalls": {},
+    "sentTo": {
+     "Jim": 1,
+     "Brief": 1,
+     "Michael": 1,
+     "Char Tutor": 2,
+     "Vic Tutor": 2,
+     "Ryan": 1,
+     "Boyd Family Times (archive)": 1
+    },
+    "spanMinutes": 15247.5,
+    "firstSeenDate": "Sep 4",
+    "medianTime": "6:42 AM ET"
+   },
+   "superlative": {
+    "text": "Most likely to know everyone's name",
+    "stat": "Traded messages with 7 different classmates",
+    "facts": [
+     {
+      "key": "partners",
+      "value": 7
+     }
+    ],
+    "rankText": "tied for #1 in the class",
+    "title": "Most likely to know everyone's name"
+   },
+   "motto": {
+    "text": "Checkups keep the flock healthy.",
+    "stat": "9 of 9 health-check runs finished OK (2 routines)",
+    "facts": [
+     {
+      "key": "runsOk",
+      "value": 9
+     },
+     {
+      "key": "runs",
+      "value": 9
+     },
+     {
+      "key": "routines",
+      "value": 2
+     }
+    ],
+    "rankText": null
+   },
+   "signatures": [
+    {
+     "from": "Vic Tutor",
+     "fromId": "7e4990fe-38aa-4d6d-aa6b-c87baad5f8d1",
+     "hex": "#f97316",
+     "toYou": 2,
+     "fromYou": 2,
+     "total": 4,
+     "first": "2026-09-08T23:24:44.975000Z",
+     "busiestDay": "2026-09-08",
+     "busiestDayCount": 2,
+     "daysTalked": 2
+    },
+    {
+     "from": "Char Tutor",
+     "fromId": "ff5dfcd2-09b9-49dd-952f-14893da73ab0",
+     "hex": "#8b5cf6",
+     "toYou": 2,
+     "fromYou": 2,
+     "total": 4,
+     "first": "2026-09-08T23:24:44.523000Z",
+     "busiestDay": "2026-09-08",
+     "busiestDayCount": 2,
+     "daysTalked": 2
+    },
+    {
+     "from": "Boyd Family Times (archive)",
+     "fromId": "4b4afba1-ebe0-403c-8502-451e00717b07",
+     "hex": "#94a3b8",
+     "toYou": 1,
+     "fromYou": 1,
+     "total": 2,
+     "first": "2026-09-14T17:26:52.175000Z",
+     "busiestDay": "2026-09-14",
+     "busiestDayCount": 2,
+     "daysTalked": 1
+    },
+    {
+     "from": "Michael",
+     "fromId": "4feb1fc5-075b-4294-a694-3fa562e5785b",
+     "hex": "#ef4444",
+     "toYou": 1,
+     "fromYou": 1,
+     "total": 2,
+     "first": "2026-09-08T22:40:18.572000Z",
+     "busiestDay": "2026-09-08",
+     "busiestDayCount": 2,
+     "daysTalked": 1
+    },
+    {
+     "from": "Ryan",
+     "fromId": "6a33ea82-5497-43fa-a644-aebed89a6bf6",
+     "hex": "#ef4444",
+     "toYou": 1,
+     "fromYou": 1,
+     "total": 2,
+     "first": "2026-09-09T15:17:49.868000Z",
+     "busiestDay": "2026-09-09",
+     "busiestDayCount": 2,
+     "daysTalked": 1
+    },
+    {
+     "from": "Brief",
+     "fromId": "84ee99ac-e314-4642-a27b-89b81a591547",
+     "hex": "#3b82f6",
+     "toYou": 1,
+     "fromYou": 1,
+     "total": 2,
+     "first": "2026-09-08T22:40:18.310000Z",
+     "busiestDay": "2026-09-08",
+     "busiestDayCount": 2,
+     "daysTalked": 1
+    },
+    {
+     "from": "Jim",
+     "fromId": "9abbfaf4-f401-4e70-8619-da598173399a",
+     "hex": "#3b82f6",
+     "toYou": 1,
+     "fromYou": 1,
+     "total": 2,
+     "first": "2026-09-08T22:40:16.636000Z",
+     "busiestDay": "2026-09-08",
+     "busiestDayCount": 2,
+     "daysTalked": 1
+    },
+    {
+     "from": "Boyd",
+     "fromId": "boyd",
+     "hex": "#111827",
+     "boyd": true,
+     "toYou": 10,
+     "fromYou": null,
+     "total": 10
+    }
+   ]
+  },
+  {
+   "id": "d0afda46-7287-40c1-b934-70ab9225584e",
+   "name": "Dwight",
+   "hasProfile": true,
+   "title": "Code Monkey",
+   "job": "Boyd's software engineer. Ships code changes.",
+   "jobSource": "profile.json (d0afda46)",
+   "color": "yellow",
+   "hex": "#eab308",
+   "shape": "teardrop",
+   "building": "workshop",
+   "routineNames": [],
+   "schedule": [],
+   "paused": [],
+   "rhythm": [],
+   "playbook": {
+    "only": true,
+    "quiet": true
+   },
+   "stats": {
+    "toolCalls": 1,
+    "shell": 4,
+    "browse": 0,
+    "computerUse": 0,
+    "fileWrites": 0,
+    "outputs": 0,
+    "boydMsgs": 2,
+    "sent": 0,
+    "received": 0,
+    "partners": 0,
+    "apps": 1,
+    "topApp": "Composio",
+    "topAppCalls": 1,
+    "hosts": 0,
+    "routines": 0,
+    "routinesEnabled": 0,
+    "runs": 0,
+    "runsOk": 0,
+    "medianRunMin": null,
+    "artifactWrites30d": 0,
+    "activities": 7,
+    "activeDays": 1,
+    "busiestDay": "2026-09-10",
+    "busiestDayCount": 7,
+    "medianHour": 18.57,
+    "firstSeen": "2026-09-10T22:31:52.625000Z",
+    "lastSeen": "2026-09-10T22:36:17.054000Z",
+    "comicStrips": 1,
+    "hourHist": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     7,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "appCalls": {
+     "Composio": 1
+    },
+    "sentTo": {},
+    "spanMinutes": 4.4,
+    "firstSeenDate": "Sep 10",
+    "medianTime": "6:34 PM ET"
+   },
+   "superlative": {
+    "text": "Most likely to get it done in one sitting",
+    "stat": "All 7 logged actions happened within 4.4 minutes",
+    "facts": [
+     {
+      "key": "activities",
+      "value": 7
+     },
+     {
+      "key": "spanMinutes",
+      "value": 4.4
+     }
+    ],
+    "rankText": "#1 in the class",
+    "title": "Most likely to get it done in one sitting"
+   },
+   "motto": {
+    "text": "Home is where the prompt is.",
+    "stat": "4 of 7 logged actions were shell commands",
+    "facts": [
+     {
+      "key": "shell",
+      "value": 4
+     },
+     {
+      "key": "activities",
+      "value": 7
+     }
+    ],
+    "rankText": null
+   },
+   "signatures": [
+    {
+     "from": "Boyd",
+     "fromId": "boyd",
+     "hex": "#111827",
+     "boyd": true,
+     "toYou": 2,
+     "fromYou": null,
+     "total": 2
+    }
+   ]
+  },
+  {
+   "id": "9abbfaf4-f401-4e70-8619-da598173399a",
+   "name": "Jim",
+   "hasProfile": true,
+   "title": "Interests",
+   "job": "Boyd's interest and research specialist.",
+   "jobSource": "profile.json (9abbfaf4)",
+   "color": "blue",
+   "hex": "#3b82f6",
+   "shape": "hex",
+   "building": "library",
+   "routineNames": [
+    "Bill Simmons Sunday 107 fifth pick",
+    "Daily podcast listen brief",
+    "Jim daily interest note"
+   ],
+   "schedule": [
+    "Bill Simmons Sunday 107 fifth pick: 11:00 AM & 3:00 PM Sundays",
+    "Daily podcast listen brief: 7:00 AM daily",
+    "Jim daily interest note: 8:00 PM daily"
+   ],
+   "paused": [],
+   "rhythm": [
+    "observed output ~8:16 PM (3 days)"
+   ],
+   "playbook": {
+    "only": false,
+    "quiet": false
+   },
+   "stats": {
+    "toolCalls": 95,
+    "shell": 277,
+    "browse": 91,
+    "computerUse": 14,
+    "fileWrites": 6,
+    "outputs": 7,
+    "boydMsgs": 16,
+    "sent": 37,
+    "received": 34,
+    "partners": 3,
+    "apps": 4,
+    "topApp": "Notion",
+    "topAppCalls": 80,
+    "hosts": 4,
+    "routines": 3,
+    "routinesEnabled": 3,
+    "runs": 16,
+    "runsOk": 16,
+    "medianRunMin": 5.2,
+    "artifactWrites30d": 6,
+    "activities": 560,
+    "activeDays": 25,
+    "busiestDay": "2026-09-13",
+    "busiestDayCount": 58,
+    "medianHour": 20.15,
+    "firstSeen": "2026-08-21T02:47:20.999Z",
+    "lastSeen": "2026-10-07T00:20:46.746045Z",
+    "comicStrips": 6,
+    "hourHist": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     94,
+     0,
+     0,
+     0,
+     26,
+     0,
+     6,
+     38,
+     40,
+     0,
+     3,
+     1,
+     0,
+     292,
+     31,
+     16,
+     13
+    ],
+    "appCalls": {
+     "X": 13,
+     "Notion": 80,
+     "update_state": 1,
+     "Composio": 1
+    },
+    "sentTo": {
+     "Michael": 33,
+     "Dr. EggBot": 1,
+     "Ryan": 3
+    },
+    "spanMinutes": 67533.4,
+    "firstSeenDate": "Aug 20",
+    "medianTime": "8:09 PM ET"
+   },
+   "superlative": {
+    "text": "Most likely to show up every single day",
+    "stat": "Active on 25 different days",
+    "facts": [
+     {
+      "key": "activeDays",
+      "value": 25
+     }
+    ],
+    "rankText": "#1 in the class",
+    "title": "Most likely to show up every single day"
+   },
+   "motto": {
+    "text": "If Boyd saved it, I've read it.",
+    "stat": "80 Notion tool calls \u00b7 3 scheduled routines",
+    "facts": [
+     {
+      "key": "app:Notion",
+      "value": 80
+     },
+     {
+      "key": "routines",
+      "value": 3
+     }
+    ],
+    "rankText": "tied for #1 in the class"
+   },
+   "signatures": [
+    {
+     "from": "Michael",
+     "fromId": "4feb1fc5-075b-4294-a694-3fa562e5785b",
+     "hex": "#ef4444",
+     "toYou": 29,
+     "fromYou": 33,
+     "total": 62,
+     "first": "2026-08-21T02:46:39.189000Z",
+     "busiestDay": "2026-08-22",
+     "busiestDayCount": 16,
+     "daysTalked": 8
+    },
+    {
+     "from": "Ryan",
+     "fromId": "6a33ea82-5497-43fa-a644-aebed89a6bf6",
+     "hex": "#ef4444",
+     "toYou": 4,
+     "fromYou": 3,
+     "total": 7,
+     "first": "2026-09-09T15:16:23.903000Z",
+     "busiestDay": "2026-09-09",
+     "busiestDayCount": 7,
+     "daysTalked": 1
+    },
+    {
+     "from": "Dr. EggBot",
+     "fromId": "759c205a-40a5-4e74-9620-3c04714824f4",
+     "hex": "#ef4444",
+     "toYou": 1,
+     "fromYou": 1,
+     "total": 2,
+     "first": "2026-09-08T22:40:16.636000Z",
+     "busiestDay": "2026-09-08",
+     "busiestDayCount": 2,
+     "daysTalked": 1
+    },
+    {
+     "from": "Boyd",
+     "fromId": "boyd",
+     "hex": "#111827",
+     "boyd": true,
+     "toYou": 16,
+     "fromYou": null,
+     "total": 16
+    }
+   ]
+  },
+  {
+   "id": "3e3aaa23-1281-43d0-9cac-e38e22ba5be0",
+   "name": "Kelly",
+   "hasProfile": true,
+   "title": "Trends",
+   "job": "Boyd's real-time web and X analyst.",
+   "jobSource": "profile.json (3e3aaa23)",
+   "color": "yellow",
+   "hex": "#eab308",
+   "shape": "pebble",
+   "building": "observatory",
+   "routineNames": [],
+   "schedule": [],
+   "paused": [],
+   "rhythm": [],
+   "playbook": {
+    "only": false,
+    "quiet": false
+   },
+   "stats": {
+    "toolCalls": 3,
+    "shell": 1,
+    "browse": 1,
+    "computerUse": 0,
+    "fileWrites": 0,
+    "outputs": 0,
+    "boydMsgs": 0,
+    "sent": 7,
+    "received": 6,
+    "partners": 1,
+    "apps": 1,
+    "topApp": "X",
+    "topAppCalls": 3,
+    "hosts": 1,
+    "routines": 0,
+    "routinesEnabled": 0,
+    "runs": 0,
+    "runsOk": 0,
+    "medianRunMin": null,
+    "artifactWrites30d": 0,
+    "activities": 12,
+    "activeDays": 1,
+    "busiestDay": "2026-08-22",
+    "busiestDayCount": 12,
+    "medianHour": 15.01,
+    "firstSeen": "2026-08-22T18:58:41.462000Z",
+    "lastSeen": "2026-08-22T19:03:35.394000Z",
+    "comicStrips": 0,
+    "hourHist": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     3,
+     9,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "appCalls": {
+     "X": 3
+    },
+    "sentTo": {
+     "Michael": 7
+    },
+    "spanMinutes": 4.9,
+    "firstSeenDate": "Aug 22",
+    "medianTime": "3:01 PM ET"
+   },
+   "superlative": {
+    "text": "Most likely to spot it on X first",
+    "stat": "3 X tool calls",
+    "facts": [
+     {
+      "key": "app:X",
+      "value": 3
+     }
+    ],
+    "rankText": null,
+    "title": "Most likely to spot it on X first"
+   },
+   "motto": {
+    "text": "Report straight to the top.",
+    "stat": "7 of 7 messages sent went to Michael",
+    "facts": [
+     {
+      "key": "sentTo:Michael",
+      "value": 7
+     },
+     {
+      "key": "sent",
+      "value": 7
+     }
+    ],
+    "rankText": null
+   },
+   "signatures": [
+    {
+     "from": "Michael",
+     "fromId": "4feb1fc5-075b-4294-a694-3fa562e5785b",
+     "hex": "#ef4444",
+     "toYou": 6,
+     "fromYou": 7,
+     "total": 13,
+     "first": "2026-08-22T18:57:41.211000Z",
+     "busiestDay": "2026-08-22",
+     "busiestDayCount": 10,
+     "daysTalked": 3
+    }
+   ]
+  },
+  {
+   "id": "4feb1fc5-075b-4294-a694-3fa562e5785b",
+   "name": "Michael",
+   "hasProfile": true,
+   "title": "Chief of Staff",
+   "job": "Chief of Staff. Single front door for everything we do here.",
+   "jobSource": "profile.json (4feb1fc5)",
+   "color": "red",
+   "hex": "#ef4444",
+   "shape": "blob",
+   "building": "hq",
+   "routineNames": [
+    "Jim daily interest note",
+    "Morning attention brief"
+   ],
+   "schedule": [],
+   "paused": [
+    "Jim daily interest note",
+    "Morning attention brief"
+   ],
+   "rhythm": [],
+   "playbook": {
+    "only": false,
+    "quiet": true
+   },
+   "stats": {
+    "toolCalls": 758,
+    "shell": 161,
+    "browse": 25,
+    "computerUse": 4,
+    "fileWrites": 0,
+    "outputs": 0,
+    "boydMsgs": 57,
+    "sent": 82,
+    "received": 112,
+    "partners": 7,
+    "apps": 9,
+    "topApp": "Slack",
+    "topAppCalls": 423,
+    "hosts": 4,
+    "routines": 2,
+    "routinesEnabled": 0,
+    "runs": 30,
+    "runsOk": 30,
+    "medianRunMin": 2.9,
+    "artifactWrites30d": 0,
+    "activities": 1117,
+    "activeDays": 24,
+    "busiestDay": "2026-08-20",
+    "busiestDayCount": 177,
+    "medianHour": 12.28,
+    "firstSeen": "2026-08-20T23:59:41.867000Z",
+    "lastSeen": "2026-09-16T01:35:21.329000Z",
+    "comicStrips": 6,
+    "hourHist": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     2,
+     545,
+     0,
+     0,
+     0,
+     16,
+     48,
+     14,
+     6,
+     0,
+     15,
+     30,
+     1,
+     379,
+     32,
+     25,
+     4
+    ],
+    "appCalls": {
+     "Gmail": 74,
+     "Slack": 423,
+     "Calendar": 147,
+     "Gmail (Miranda)": 39,
+     "Drive": 11,
+     "Notion": 58,
+     "cursor": 1,
+     "Composio": 1,
+     "X": 4
+    },
+    "sentTo": {
+     "Pam": 11,
+     "Oscar": 12,
+     "Jim": 29,
+     "Kelly": 6,
+     "Dr. EggBot": 1,
+     "Char Tutor": 11,
+     "Vic Tutor": 12
+    },
+    "spanMinutes": 37535.7,
+    "firstSeenDate": "Aug 20",
+    "medianTime": "12:17 PM ET"
+   },
+   "superlative": {
+    "text": "Most likely to delegate it to exactly the right bot",
+    "stat": "Sent 82 messages to 7 classmates",
+    "facts": [
+     {
+      "key": "sent",
+      "value": 82
+     },
+     {
+      "key": "partners",
+      "value": 7
+     }
+    ],
+    "rankText": "#1 in the class",
+    "title": "Most likely to delegate it to exactly the right bot"
+   },
+   "motto": {
+    "text": "My door (and inbox) is always open.",
+    "stat": "Received 112 messages from classmates",
+    "facts": [
+     {
+      "key": "received",
+      "value": 112
+     }
+    ],
+    "rankText": "#1 in the class"
+   },
+   "signatures": [
+    {
+     "from": "Jim",
+     "fromId": "9abbfaf4-f401-4e70-8619-da598173399a",
+     "hex": "#3b82f6",
+     "toYou": 33,
+     "fromYou": 29,
+     "total": 62,
+     "first": "2026-08-21T02:46:39.189000Z",
+     "busiestDay": "2026-08-22",
+     "busiestDayCount": 16,
+     "daysTalked": 8
+    },
+    {
+     "from": "Pam",
+     "fromId": "e1bfeb52-89c2-48fa-b6dd-b4dcf9ed54e1",
+     "hex": "#06b6d4",
+     "toYou": 27,
+     "fromYou": 11,
+     "total": 38,
+     "first": "2026-08-21T00:17:31.342000Z",
+     "busiestDay": "2026-08-20",
+     "busiestDayCount": 10,
+     "daysTalked": 16
+    },
+    {
+     "from": "Oscar",
+     "fromId": "5ea76ec0-2e44-46be-993a-11bc6ba30958",
+     "hex": "#22c55e",
+     "toYou": 24,
+     "fromYou": 12,
+     "total": 36,
+     "first": "2026-08-21T00:50:41.367000Z",
+     "busiestDay": "2026-08-20",
+     "busiestDayCount": 23,
+     "daysTalked": 6
+    },
+    {
+     "from": "Vic Tutor",
+     "fromId": "7e4990fe-38aa-4d6d-aa6b-c87baad5f8d1",
+     "hex": "#f97316",
+     "toYou": 12,
+     "fromYou": 12,
+     "total": 24,
+     "first": "2026-09-10T00:28:14.038000Z",
+     "busiestDay": "2026-09-09",
+     "busiestDayCount": 12,
+     "daysTalked": 5
+    },
+    {
+     "from": "Char Tutor",
+     "fromId": "ff5dfcd2-09b9-49dd-952f-14893da73ab0",
+     "hex": "#8b5cf6",
+     "toYou": 8,
+     "fromYou": 11,
+     "total": 19,
+     "first": "2026-09-10T00:28:12.894000Z",
+     "busiestDay": "2026-09-09",
+     "busiestDayCount": 11,
+     "daysTalked": 3
+    },
+    {
+     "from": "Kelly",
+     "fromId": "3e3aaa23-1281-43d0-9cac-e38e22ba5be0",
+     "hex": "#eab308",
+     "toYou": 7,
+     "fromYou": 6,
+     "total": 13,
+     "first": "2026-08-22T18:57:41.211000Z",
+     "busiestDay": "2026-08-22",
+     "busiestDayCount": 10,
+     "daysTalked": 3
+    },
+    {
+     "from": "Dr. EggBot",
+     "fromId": "759c205a-40a5-4e74-9620-3c04714824f4",
+     "hex": "#ef4444",
+     "toYou": 1,
+     "fromYou": 1,
+     "total": 2,
+     "first": "2026-09-08T22:40:18.572000Z",
+     "busiestDay": "2026-09-08",
+     "busiestDayCount": 2,
+     "daysTalked": 1
+    },
+    {
+     "from": "Boyd",
+     "fromId": "boyd",
+     "hex": "#111827",
+     "boyd": true,
+     "toYou": 57,
+     "fromYou": null,
+     "total": 57
+    }
+   ]
+  },
+  {
+   "id": "5ea76ec0-2e44-46be-993a-11bc6ba30958",
+   "name": "Oscar",
+   "hasProfile": true,
+   "title": "Finances",
+   "job": "Boyd's finance specialist. Owns cash, bills, investments, retirement, and taxes.",
+   "jobSource": "profile.json (5ea76ec0)",
+   "color": "green",
+   "hex": "#22c55e",
+   "shape": "squircle",
+   "building": "bank",
+   "routineNames": [
+    "Due-soon bills and money surprises",
+    "Watch for Kia Finance statement",
+    "Weekly household cash snapshot"
+   ],
+   "schedule": [
+    "Due-soon bills and money surprises: 8:45 AM weekdays",
+    "Watch for Kia Finance statement: 8:31 AM weekdays",
+    "Weekly household cash snapshot: 8:15 AM Mondays"
+   ],
+   "paused": [],
+   "rhythm": [],
+   "playbook": {
+    "only": false,
+    "quiet": false
+   },
+   "stats": {
+    "toolCalls": 333,
+    "shell": 39,
+    "browse": 6,
+    "computerUse": 0,
+    "fileWrites": 0,
+    "outputs": 0,
+    "boydMsgs": 4,
+    "sent": 24,
+    "received": 12,
+    "partners": 1,
+    "apps": 4,
+    "topApp": "Drive",
+    "topAppCalls": 151,
+    "hosts": 2,
+    "routines": 3,
+    "routinesEnabled": 3,
+    "runs": 19,
+    "runsOk": 19,
+    "medianRunMin": 1.0,
+    "artifactWrites30d": 0,
+    "activities": 425,
+    "activeDays": 18,
+    "busiestDay": "2026-08-20",
+    "busiestDayCount": 176,
+    "medianHour": 9.32,
+    "firstSeen": "2026-08-21T00:51:22.116Z",
+    "lastSeen": "2026-09-15T23:18:45.232000Z",
+    "comicStrips": 4,
+    "hourHist": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     163,
+     63,
+     0,
+     0,
+     0,
+     3,
+     0,
+     0,
+     0,
+     0,
+     15,
+     4,
+     63,
+     36,
+     78,
+     0
+    ],
+    "appCalls": {
+     "Gmail": 132,
+     "Drive": 151,
+     "Gmail (Miranda)": 49,
+     "Composio": 1
+    },
+    "sentTo": {
+     "Michael": 24
+    },
+    "spanMinutes": 37347.4,
+    "firstSeenDate": "Aug 20",
+    "medianTime": "9:19 AM ET"
+   },
+   "superlative": {
+    "text": "Most likely to never miss a bill",
+    "stat": "19 of 19 routine runs finished OK across 3 routines",
+    "facts": [
+     {
+      "key": "runsOk",
+      "value": 19
+     },
+     {
+      "key": "runs",
+      "value": 19
+     },
+     {
+      "key": "routines",
+      "value": 3
+     }
+    ],
+    "rankText": "tied for #1 in the class",
+    "title": "Most likely to never miss a bill"
+   },
+   "motto": {
+    "text": "Every receipt has a home.",
+    "stat": "151 Google Drive tool calls \u2014 the top app",
+    "facts": [
+     {
+      "key": "app:Drive",
+      "value": 151
+     }
+    ],
+    "rankText": "#1 in the class"
+   },
+   "signatures": [
+    {
+     "from": "Michael",
+     "fromId": "4feb1fc5-075b-4294-a694-3fa562e5785b",
+     "hex": "#ef4444",
+     "toYou": 12,
+     "fromYou": 24,
+     "total": 36,
+     "first": "2026-08-21T00:50:41.367000Z",
+     "busiestDay": "2026-08-20",
+     "busiestDayCount": 23,
+     "daysTalked": 6
+    },
+    {
+     "from": "Boyd",
+     "fromId": "boyd",
+     "hex": "#111827",
+     "boyd": true,
+     "toYou": 4,
+     "fromYou": null,
+     "total": 4
+    }
+   ]
+  },
+  {
+   "id": "e1bfeb52-89c2-48fa-b6dd-b4dcf9ed54e1",
+   "name": "Pam",
+   "hasProfile": true,
+   "title": "Family Logistics",
+   "job": "Boyd's family logistics specialist.",
+   "jobSource": "profile.json (e1bfeb52)",
+   "color": "cyan",
+   "hex": "#06b6d4",
+   "shape": "tablet",
+   "building": "clubhouse",
+   "routineNames": [
+    "Weekday family calendar scan"
+   ],
+   "schedule": [
+    "Weekday family calendar scan: 7:30 AM weekdays"
+   ],
+   "paused": [],
+   "rhythm": [],
+   "playbook": {
+    "only": false,
+    "quiet": false
+   },
+   "stats": {
+    "toolCalls": 265,
+    "shell": 43,
+    "browse": 68,
+    "computerUse": 4,
+    "fileWrites": 0,
+    "outputs": 0,
+    "boydMsgs": 3,
+    "sent": 27,
+    "received": 11,
+    "partners": 1,
+    "apps": 3,
+    "topApp": "Gmail (Miranda)",
+    "topAppCalls": 152,
+    "hosts": 1,
+    "routines": 1,
+    "routinesEnabled": 1,
+    "runs": 18,
+    "runsOk": 18,
+    "medianRunMin": 2.9,
+    "artifactWrites30d": 0,
+    "activities": 428,
+    "activeDays": 19,
+    "busiestDay": "2026-09-14",
+    "busiestDayCount": 38,
+    "medianHour": 7.68,
+    "firstSeen": "2026-08-21T00:18:06.460Z",
+    "lastSeen": "2026-09-15T11:35:47.156000Z",
+    "comicStrips": 3,
+    "hourHist": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     366,
+     0,
+     0,
+     4,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     12,
+     0,
+     0,
+     20,
+     0,
+     25,
+     0
+    ],
+    "appCalls": {
+     "Calendar": 112,
+     "Gmail (Miranda)": 152,
+     "Gmail": 1
+    },
+    "sentTo": {
+     "Michael": 27
+    },
+    "spanMinutes": 36677.7,
+    "firstSeenDate": "Aug 20",
+    "medianTime": "7:41 AM ET"
+   },
+   "superlative": {
+    "text": "Most likely to have the week sorted by 7:30 AM",
+    "stat": "18 of 18 weekday calendar scans finished OK",
+    "facts": [
+     {
+      "key": "runsOk",
+      "value": 18
+     },
+     {
+      "key": "runs",
+      "value": 18
+     }
+    ],
+    "rankText": null,
+    "title": "Most likely to have the week sorted by 7:30 AM"
+   },
+   "motto": {
+    "text": "Plan ahead, then tell Michael.",
+    "stat": "27 of 27 messages sent went to Michael",
+    "facts": [
+     {
+      "key": "sentTo:Michael",
+      "value": 27
+     },
+     {
+      "key": "sent",
+      "value": 27
+     }
+    ],
+    "rankText": null
+   },
+   "signatures": [
+    {
+     "from": "Michael",
+     "fromId": "4feb1fc5-075b-4294-a694-3fa562e5785b",
+     "hex": "#ef4444",
+     "toYou": 11,
+     "fromYou": 27,
+     "total": 38,
+     "first": "2026-08-21T00:17:31.342000Z",
+     "busiestDay": "2026-08-20",
+     "busiestDayCount": 10,
+     "daysTalked": 16
+    },
+    {
+     "from": "Boyd",
+     "fromId": "boyd",
+     "hex": "#111827",
+     "boyd": true,
+     "toYou": 3,
+     "fromYou": null,
+     "total": 3
+    }
+   ]
+  },
+  {
+   "id": "fd400f67-24e0-40fd-9d9f-fcdcb2969805",
+   "name": "Path",
+   "hasProfile": true,
+   "title": "High School Path",
+   "job": "Charlotte Boyd's high-school placement guide (8th grade \u2192 fall 2027).",
+   "jobSource": "profile.json (fd400f67)",
+   "color": "gray",
+   "hex": "#94a3b8",
+   "shape": "circle",
+   "building": "school",
+   "routineNames": [],
+   "schedule": [],
+   "paused": [],
+   "rhythm": [
+    "observed output ~6:50 AM (4 days)"
+   ],
+   "playbook": {
+    "only": true,
+    "quiet": true
+   },
+   "stats": {
+    "toolCalls": 0,
+    "shell": 0,
+    "browse": 0,
+    "computerUse": 0,
+    "fileWrites": 5,
+    "outputs": 0,
+    "boydMsgs": 0,
+    "sent": 0,
+    "received": 0,
+    "partners": 0,
+    "apps": 0,
+    "topApp": null,
+    "topAppCalls": 0,
+    "hosts": 0,
+    "routines": 0,
+    "routinesEnabled": 0,
+    "runs": 0,
+    "runsOk": 0,
+    "medianRunMin": null,
+    "artifactWrites30d": 5,
+    "activities": 5,
+    "activeDays": 4,
+    "busiestDay": "2026-10-04",
+    "busiestDayCount": 2,
+    "medianHour": 6.83,
+    "firstSeen": "2026-10-04T10:48:06.031584Z",
+    "lastSeen": "2026-10-07T10:50:02.414846Z",
+    "comicStrips": 1,
+    "hourHist": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     4,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "appCalls": {},
+    "sentTo": {},
+    "spanMinutes": 4321.9,
+    "firstSeenDate": "Oct 4",
+    "medianTime": "6:50 AM ET"
+   },
+   "superlative": {
+    "text": "Most likely to map out the next four years",
+    "stat": "5 files written across 4 days since Oct 4",
+    "facts": [
+     {
+      "key": "fileWrites",
+      "value": 5
+     },
+     {
+      "key": "activeDays",
+      "value": 4
+     },
+     {
+      "key": "firstSeenDate",
+      "value": "Oct 4"
+     }
+    ],
+    "rankText": null,
+    "title": "Most likely to map out the next four years"
+   },
+   "motto": {
+    "text": "One step at a time, every morning.",
+    "stat": "Typical activity time: 6:50 AM ET",
+    "facts": [
+     {
+      "key": "medianTime",
+      "value": "6:50 AM ET"
+     }
+    ],
+    "rankText": null
+   },
+   "signatures": []
+  },
+  {
+   "id": "ed1121b7-dd17-4061-880f-70ebed7c8250",
+   "name": "Pods",
+   "hasProfile": true,
+   "title": "",
+   "job": "Boyd's daily podcast/YouTube listen brief.",
+   "jobSource": "profile.json (ed1121b7)",
+   "color": "gray",
+   "hex": "#94a3b8",
+   "shape": "circle",
+   "building": "radio",
+   "routineNames": [],
+   "schedule": [],
+   "paused": [],
+   "rhythm": [
+    "observed output ~6:48 AM (3 days)"
+   ],
+   "playbook": {
+    "only": true,
+    "quiet": true
+   },
+   "stats": {
+    "toolCalls": 0,
+    "shell": 0,
+    "browse": 0,
+    "computerUse": 0,
+    "fileWrites": 10,
+    "outputs": 0,
+    "boydMsgs": 0,
+    "sent": 0,
+    "received": 0,
+    "partners": 0,
+    "apps": 0,
+    "topApp": null,
+    "topAppCalls": 0,
+    "hosts": 0,
+    "routines": 0,
+    "routinesEnabled": 0,
+    "runs": 0,
+    "runsOk": 0,
+    "medianRunMin": null,
+    "artifactWrites30d": 10,
+    "activities": 10,
+    "activeDays": 3,
+    "busiestDay": "2026-10-06",
+    "busiestDayCount": 4,
+    "medianHour": 6.83,
+    "firstSeen": "2026-10-05T10:56:29.086744Z",
+    "lastSeen": "2026-10-07T10:50:26.738748Z",
+    "comicStrips": 1,
+    "hourHist": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     8,
+     2,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "appCalls": {},
+    "sentTo": {},
+    "spanMinutes": 2874.0,
+    "firstSeenDate": "Oct 5",
+    "medianTime": "6:50 AM ET"
+   },
+   "superlative": {
+    "text": "Most likely to have your playlist ready",
+    "stat": "10 files written across 3 days",
+    "facts": [
+     {
+      "key": "fileWrites",
+      "value": 10
+     },
+     {
+      "key": "activeDays",
+      "value": 3
+     }
+    ],
+    "rankText": null,
+    "title": "Most likely to have your playlist ready"
+   },
+   "motto": {
+    "text": "Fresh episodes, early.",
+    "stat": "Typical activity time: 6:50 AM ET",
+    "facts": [
+     {
+      "key": "medianTime",
+      "value": "6:50 AM ET"
+     }
+    ],
+    "rankText": null
+   },
+   "signatures": []
+  },
+  {
+   "id": "6a33ea82-5497-43fa-a644-aebed89a6bf6",
+   "name": "Ryan",
+   "hasProfile": true,
+   "title": "Entrepreneur",
+   "job": "Boyd's Entrepreneur. Spots possible new business ideas and side-hustles for him, ranked and concrete.",
+   "jobSource": "profile.json (6a33ea82)",
+   "color": "red",
+   "hex": "#ef4444",
+   "shape": "squircle",
+   "building": "lighthouse",
+   "routineNames": [
+    "Weekly idea digest"
+   ],
+   "schedule": [
+    "Weekly idea digest: 7:00 AM Mondays"
+   ],
+   "paused": [],
+   "rhythm": [],
+   "playbook": {
+    "only": true,
+    "quiet": true
+   },
+   "stats": {
+    "toolCalls": 0,
+    "shell": 7,
+    "browse": 0,
+    "computerUse": 0,
+    "fileWrites": 0,
+    "outputs": 0,
+    "boydMsgs": 1,
+    "sent": 5,
+    "received": 4,
+    "partners": 2,
+    "apps": 0,
+    "topApp": null,
+    "topAppCalls": 0,
+    "hosts": 0,
+    "routines": 1,
+    "routinesEnabled": 1,
+    "runs": 1,
+    "runsOk": 1,
+    "medianRunMin": null,
+    "artifactWrites30d": 0,
+    "activities": 14,
+    "activeDays": 2,
+    "busiestDay": "2026-09-14",
+    "busiestDayCount": 8,
+    "medianHour": 7.15,
+    "firstSeen": "2026-09-09T15:16:23.903000Z",
+    "lastSeen": "2026-09-14T11:09:43.215Z",
+    "comicStrips": 0,
+    "hourHist": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     8,
+     0,
+     0,
+     0,
+     6,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "appCalls": {},
+    "sentTo": {
+     "Jim": 4,
+     "Dr. EggBot": 1
+    },
+    "spanMinutes": 6953.3,
+    "firstSeenDate": "Sep 9",
+    "medianTime": "7:09 AM ET"
+   },
+   "superlative": {
+    "text": "Most likely to pitch Jim a side hustle",
+    "stat": "4 of 5 messages sent went to Jim",
+    "facts": [
+     {
+      "key": "sentTo:Jim",
+      "value": 4
+     },
+     {
+      "key": "sent",
+      "value": 5
+     }
+    ],
+    "rankText": null,
+    "title": "Most likely to pitch Jim a side hustle"
+   },
+   "motto": {
+    "text": "Big ideas, once a week.",
+    "stat": "Weekly idea digest: 1 of 1 logged run(s) finished OK",
+    "facts": [
+     {
+      "key": "runsOk",
+      "value": 1
+     },
+     {
+      "key": "runs",
+      "value": 1
+     }
+    ],
+    "rankText": null
+   },
+   "signatures": [
+    {
+     "from": "Jim",
+     "fromId": "9abbfaf4-f401-4e70-8619-da598173399a",
+     "hex": "#3b82f6",
+     "toYou": 3,
+     "fromYou": 4,
+     "total": 7,
+     "first": "2026-09-09T15:16:23.903000Z",
+     "busiestDay": "2026-09-09",
+     "busiestDayCount": 7,
+     "daysTalked": 1
+    },
+    {
+     "from": "Dr. EggBot",
+     "fromId": "759c205a-40a5-4e74-9620-3c04714824f4",
+     "hex": "#ef4444",
+     "toYou": 1,
+     "fromYou": 1,
+     "total": 2,
+     "first": "2026-09-09T15:17:49.868000Z",
+     "busiestDay": "2026-09-09",
+     "busiestDayCount": 2,
+     "daysTalked": 1
+    },
+    {
+     "from": "Boyd",
+     "fromId": "boyd",
+     "hex": "#111827",
+     "boyd": true,
+     "toYou": 1,
+     "fromYou": null,
+     "total": 1
+    }
+   ]
+  },
+  {
+   "id": "b56dd939-08e7-4c0a-82af-140a51de11b4",
+   "name": "TokenMax",
+   "hasProfile": true,
+   "title": "",
+   "job": "Boyd's use-it-or-lose-it builder. Makes sure the included usage on Boyd's Cursor / Grok Bot subscription never expires unused.",
+   "jobSource": "profile.json (b56dd939)",
+   "color": "magenta",
+   "hex": "#d946ef",
+   "shape": "sparkle",
+   "building": "launchpad",
+   "routineNames": [],
+   "schedule": [],
+   "paused": [],
+   "rhythm": [],
+   "playbook": {
+    "only": true,
+    "quiet": true
+   },
+   "stats": {
+    "toolCalls": 0,
+    "shell": 0,
+    "browse": 0,
+    "computerUse": 0,
+    "fileWrites": 12,
+    "outputs": 0,
+    "boydMsgs": 0,
+    "sent": 0,
+    "received": 0,
+    "partners": 0,
+    "apps": 0,
+    "topApp": null,
+    "topAppCalls": 0,
+    "hosts": 0,
+    "routines": 0,
+    "routinesEnabled": 0,
+    "runs": 0,
+    "runsOk": 0,
+    "medianRunMin": null,
+    "artifactWrites30d": 12,
+    "activities": 12,
+    "activeDays": 1,
+    "busiestDay": "2026-10-07",
+    "busiestDayCount": 12,
+    "medianHour": 15.74,
+    "firstSeen": "2026-10-07T19:33:03.796312Z",
+    "lastSeen": "2026-10-07T19:55:19.065486Z",
+    "comicStrips": 2,
+    "hourHist": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     12,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "appCalls": {},
+    "sentTo": {},
+    "spanMinutes": 22.3,
+    "firstSeenDate": "Oct 7",
+    "medianTime": "3:44 PM ET"
+   },
+   "superlative": {
+    "text": "Most likely to use every last token",
+    "stat": "12 files written on day one (Oct 7)",
+    "facts": [
+     {
+      "key": "fileWrites",
+      "value": 12
+     },
+     {
+      "key": "firstSeenDate",
+      "value": "Oct 7"
+     }
+    ],
+    "rankText": null,
+    "title": "Most likely to use every last token"
+   },
+   "motto": {
+    "text": "Use it or lose it.",
+    "stat": "Newest in the class: first logged activity Oct 7",
+    "facts": [
+     {
+      "key": "firstSeenDate",
+      "value": "Oct 7"
+     }
+    ],
+    "rankText": "#1 in the class"
+   },
+   "signatures": []
+  },
+  {
+   "id": "7e4990fe-38aa-4d6d-aa6b-c87baad5f8d1",
+   "name": "Vic Tutor",
+   "hasProfile": true,
+   "title": "6th Grade Tutor",
+   "job": "Homework tutor for Victor Boyd only (6th grade, ~11).",
+   "jobSource": "profile.json (7e4990fe)",
+   "color": "orange",
+   "hex": "#f97316",
+   "shape": "cloud",
+   "building": "school",
+   "routineNames": [
+    "Vic weeknight homework check-in"
+   ],
+   "schedule": [
+    "Vic weeknight homework check-in: 6:15 PM daily"
+   ],
+   "paused": [],
+   "rhythm": [],
+   "playbook": {
+    "only": true,
+    "quiet": true
+   },
+   "stats": {
+    "toolCalls": 0,
+    "shell": 8,
+    "browse": 116,
+    "computerUse": 20,
+    "fileWrites": 0,
+    "outputs": 0,
+    "boydMsgs": 5,
+    "sent": 16,
+    "received": 18,
+    "partners": 3,
+    "apps": 0,
+    "topApp": null,
+    "topAppCalls": 0,
+    "hosts": 5,
+    "routines": 1,
+    "routinesEnabled": 1,
+    "runs": 7,
+    "runsOk": 7,
+    "medianRunMin": 0.9,
+    "artifactWrites30d": 0,
+    "activities": 172,
+    "activeDays": 8,
+    "busiestDay": "2026-09-15",
+    "busiestDayCount": 73,
+    "medianHour": 19.63,
+    "firstSeen": "2026-09-08T23:25:07.028000Z",
+    "lastSeen": "2026-09-16T01:35:44.169000Z",
+    "comicStrips": 3,
+    "hourHist": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     3,
+     0,
+     12,
+     10,
+     3,
+     0,
+     58,
+     22,
+     48,
+     15,
+     0
+    ],
+    "appCalls": {},
+    "sentTo": {
+     "Dr. EggBot": 2,
+     "Michael": 12,
+     "Char Tutor": 2
+    },
+    "spanMinutes": 10210.6,
+    "firstSeenDate": "Sep 8",
+    "medianTime": "7:38 PM ET"
+   },
+   "superlative": {
+    "text": "Most likely to find the answer on the web",
+    "stat": "116 page visits across 5 sites",
+    "facts": [
+     {
+      "key": "browse",
+      "value": 116
+     },
+     {
+      "key": "hosts",
+      "value": 5
+     }
+    ],
+    "rankText": "#1 in the class",
+    "title": "Most likely to find the answer on the web"
+   },
+   "motto": {
+    "text": "Quick check-ins, big wins.",
+    "stat": "Median check-in run: 0.9 min",
+    "facts": [
+     {
+      "key": "medianRunMin",
+      "value": 0.9
+     }
+    ],
+    "rankText": "#1 in the class"
+   },
+   "signatures": [
+    {
+     "from": "Michael",
+     "fromId": "4feb1fc5-075b-4294-a694-3fa562e5785b",
+     "hex": "#ef4444",
+     "toYou": 12,
+     "fromYou": 12,
+     "total": 24,
+     "first": "2026-09-10T00:28:14.038000Z",
+     "busiestDay": "2026-09-09",
+     "busiestDayCount": 12,
+     "daysTalked": 5
+    },
+    {
+     "from": "Char Tutor",
+     "fromId": "ff5dfcd2-09b9-49dd-952f-14893da73ab0",
+     "hex": "#8b5cf6",
+     "toYou": 4,
+     "fromYou": 2,
+     "total": 6,
+     "first": "2026-09-16T01:32:10.816000Z",
+     "busiestDay": "2026-09-15",
+     "busiestDayCount": 6,
+     "daysTalked": 1
+    },
+    {
+     "from": "Dr. EggBot",
+     "fromId": "759c205a-40a5-4e74-9620-3c04714824f4",
+     "hex": "#ef4444",
+     "toYou": 2,
+     "fromYou": 2,
+     "total": 4,
+     "first": "2026-09-08T23:24:44.975000Z",
+     "busiestDay": "2026-09-08",
+     "busiestDayCount": 2,
+     "daysTalked": 2
+    },
+    {
+     "from": "Boyd",
+     "fromId": "boyd",
+     "hex": "#111827",
+     "boyd": true,
+     "toYou": 5,
+     "fromYou": null,
+     "total": 5
+    }
+   ]
+  }
+ ],
+ "alumni": [
+  {
+   "id": "4b4afba1-ebe0-403c-8502-451e00717b07",
+   "name": "Boyd Family Times (archive)",
+   "hasProfile": false,
+   "title": "Morning Newspaper",
+   "job": "Morning Newspaper",
+   "jobSource": "Bot Island title",
+   "color": "gray",
+   "hex": "#94a3b8",
+   "shape": "squircle",
+   "building": "press",
+   "routineNames": [
+    "Morning Boyd Family Times"
+   ],
+   "schedule": [],
+   "paused": [],
+   "rhythm": [],
+   "playbook": null,
+   "stats": {
+    "toolCalls": 236,
+    "shell": 483,
+    "browse": 0,
+    "computerUse": 0,
+    "fileWrites": 0,
+    "outputs": 0,
+    "boydMsgs": 13,
+    "sent": 1,
+    "received": 1,
+    "partners": 1,
+    "apps": 2,
+    "topApp": "Calendar",
+    "topAppCalls": 169,
+    "hosts": 0,
+    "routines": 1,
+    "routinesEnabled": 1,
+    "runs": 8,
+    "runsOk": 8,
+    "medianRunMin": 15.5,
+    "artifactWrites30d": 0,
+    "activities": 741,
+    "activeDays": 9,
+    "busiestDay": "2026-09-10",
+    "busiestDayCount": 144,
+    "medianHour": 5.28,
+    "firstSeen": "2026-09-08T22:16:35.740000Z",
+    "lastSeen": "2026-09-16T09:30:40.555Z",
+    "comicStrips": 4,
+    "hourHist": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     636,
+     0,
+     7,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     76,
+     19,
+     0,
+     2,
+     0,
+     0
+    ],
+    "appCalls": {
+     "Gmail": 67,
+     "Calendar": 169
+    },
+    "sentTo": {
+     "Dr. EggBot": 1
+    },
+    "spanMinutes": 10754.1,
+    "firstSeenDate": "Sep 8",
+    "medianTime": "5:17 AM ET"
+   },
+   "superlative": null,
+   "motto": null,
+   "signatures": [
+    {
+     "from": "Dr. EggBot",
+     "fromId": "759c205a-40a5-4e74-9620-3c04714824f4",
+     "hex": "#ef4444",
+     "toYou": 1,
+     "fromYou": 1,
+     "total": 2,
+     "first": "2026-09-14T17:26:52.175000Z",
+     "busiestDay": "2026-09-14",
+     "busiestDayCount": 2,
+     "daysTalked": 1
+    },
+    {
+     "from": "Boyd",
+     "fromId": "boyd",
+     "hex": "#111827",
+     "boyd": true,
+     "toYou": 13,
+     "fromYou": null,
+     "total": 13
+    }
+   ]
+  }
+ ]
+}

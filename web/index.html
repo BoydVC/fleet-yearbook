@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Fleet '26 · Grok Bot Yearbook</title>
+<!--FONTS-->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="viewer">
+  <div id="bar">
+    <span class="brand">The Fleet ’26 · Yearbook</span>
+    <span id="ctl"><button id="prev" title="Previous (←)">◀</button><span id="pg"></span><button id="next" title="Next (→)">▶</button></span>
+    <span id="links"><a id="toc-link" href="#" data-go="2">Class stats</a> · <a href="#" data-go="18">Awards</a> · <a id="pdf" href="fleet-yearbook.pdf" target="_blank">PDF</a></span>
+  </div>
+  <div id="stage"><div id="book"></div></div>
+  <div id="hint">click a page or use ← → to flip</div>
+</div>
+<div id="print"></div>
+<!--INLINE-DATA-->
+<script src="portrait.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -349,13 +349,13 @@
     {
      "kind": "profile",
      "bot": "Oscar",
-     "quote": "Household: Boyd (Christopher Boyd), wife Miranda (Randi).",
+     "quote": "Household: Boyd (Christopher Boyd), wife Jordan (Randi).",
      "source": "~/agent-data/agents/5ea76ec0-2e44-46be-993a-11bc6ba30958/profile.json"
     },
     {
      "kind": "profile",
      "bot": "Pam",
-     "quote": "Household: Miranda; kids Charlotte (Char, 2/12/2013) and Victor (Vic, 6/23/2015) only.",
+     "quote": "Household: Jordan; kids Alex (Alex, 2/12/2013) and Samuel (Sam, 6/23/2015) only.",
      "source": "~/agent-data/agents/e1bfeb52-89c2-48fa-b6dd-b4dcf9ed54e1/profile.json"
     }
    ],
@@ -558,7 +558,7 @@
     },
     {
      "kind": "profile",
-     "bot": "Vic Tutor",
+     "bot": "Sam Tutor",
      "quote": "PowerSchool: always follow [PowerSchool own-browser grades](sand-workflow:powerschool-own-browser-grades)",
      "source": "~/agent-data/agents/7e4990fe-38aa-4d6d-aa6b-c87baad5f8d1/profile.json"
     },
@@ -576,7 +576,7 @@
     },
     {
      "kind": "doctor",
-     "quote": "Twin routines: “Vic weeknight homework check-in” and “Char weeknight homework check-in”",
+     "quote": "Twin routines: “Sam weeknight homework check-in” and “Alex weeknight homework check-in”",
      "label": null,
      "source": "/workspace/tokenmax/bot-island/reports/fleet-health-2026-10-07.html"
     },
@@ -829,7 +829,7 @@
     },
     {
      "kind": "fact",
-     "text": "9 of 15 configured bots carry a never-invent rule (Boyd Family Times, Char Tutor, Jim, Oscar, Pam, Path, Pods, Ryan, Vic Tutor).",
+     "text": "9 of 15 configured bots carry a never-invent rule (Boyd Family Times, Alex Tutor, Jim, Oscar, Pam, Path, Pods, Ryan, Sam Tutor).",
      "source": "profile.json ×15",
      "how": "regex \"never invent|do not invent\""
     },
@@ -1181,7 +1181,7 @@
    "fleet": [
     {
      "kind": "fact",
-     "text": "Computer-use sessions logged by bot: Char Tutor 21, Vic Tutor 20, Jim 14, Pam 4, Michael 4 (63 total).",
+     "text": "Computer-use sessions logged by bot: Alex Tutor 21, Sam Tutor 20, Jim 14, Pam 4, Michael 4 (63 total).",
      "source": "/workspace/tokenmax/bot-island/data/fleet.json",
      "how": "events where type = computer_use_session"
     },
@@ -1193,14 +1193,14 @@
     },
     {
      "kind": "doctor",
-     "quote": "Vic Tutor: 40 min of screen-driving (computer use)",
+     "quote": "Sam Tutor: 40 min of screen-driving (computer use)",
      "label": null,
      "source": "/workspace/tokenmax/bot-island/reports/fleet-health-2026-10-07.html"
     },
     {
      "kind": "skill",
      "skill": "PowerSchool own-browser grades",
-     "quote": "Concurrent Char + Vic sessions kick each other and force Boyd to re-enter credentials.",
+     "quote": "Concurrent Alex + Sam sessions kick each other and force Boyd to re-enter credentials.",
      "source": "~/agent-data/workflows/powerschool-own-browser-grades/SKILL.md"
     },
     {
@@ -1476,7 +1476,7 @@
    ],
    "effort": "L",
    "minutes": "half day",
-   "impact": "Cuts the two biggest screen-driving lines (Jim 50 min, Vic Tutor 40 min)",
+   "impact": "Cuts the two biggest screen-driving lines (Jim 50 min, Sam Tutor 40 min)",
    "evidence": "Fleet Doctor computer-use findings. 63 computer-use sessions logged.",
    "how": "Have Dwight launch a Cloud Agent to script the PowerSchool pull (one login, JSON out) that both tutors call.",
    "rank": 9
@@ -1501,44 +1501,44 @@
   "anti": [
    "Boyd Family Times",
    "Brief",
-   "Char Tutor",
+   "Alex Tutor",
    "Dwight",
    "Path",
    "Pods",
    "Ryan",
-   "Vic Tutor"
+   "Sam Tutor"
   ],
   "only": [
    "Boyd Family Times",
-   "Char Tutor",
+   "Alex Tutor",
    "Dwight",
    "Path",
    "Pods",
    "Ryan",
    "TokenMax",
-   "Vic Tutor"
+   "Sam Tutor"
   ],
   "quiet": [
    "Brief",
-   "Char Tutor",
+   "Alex Tutor",
    "Dwight",
    "Michael",
    "Path",
    "Pods",
    "Ryan",
    "TokenMax",
-   "Vic Tutor"
+   "Sam Tutor"
   ],
   "noinv": [
    "Boyd Family Times",
-   "Char Tutor",
+   "Alex Tutor",
    "Jim",
    "Oscar",
    "Pam",
    "Path",
    "Pods",
    "Ryan",
-   "Vic Tutor"
+   "Sam Tutor"
   ],
   "mentions_michael": [
    "Boyd Family Times",
@@ -1564,8 +1564,8 @@
    "Pam": 4,
    "Michael": 4,
    "Jim": 14,
-   "Vic Tutor": 20,
-   "Char Tutor": 21
+   "Sam Tutor": 20,
+   "Alex Tutor": 21
   },
   "mem": 11,
   "skills": 9
@@ -1590,13 +1590,13 @@
    ]
   },
   {
-   "name": "Char Tutor",
+   "name": "Alex Tutor",
    "title": "8th Grade Tutor",
    "anti": true,
    "only": true,
    "quiet": true,
    "routines": [
-    "Char weeknight homework check-in"
+    "Alex weeknight homework check-in"
    ]
   },
   {
@@ -1703,13 +1703,13 @@
    "routines": []
   },
   {
-   "name": "Vic Tutor",
+   "name": "Sam Tutor",
    "title": "6th Grade Tutor",
    "anti": true,
    "only": true,
    "quiet": true,
    "routines": [
-    "Vic weeknight homework check-in"
+    "Sam weeknight homework check-in"
    ]
   }
  ],

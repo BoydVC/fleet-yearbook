@@ -172,7 +172,7 @@
   },
   {
    "title": "Speed Demon",
-   "winner": "Vic Tutor",
+   "winner": "Sam Tutor",
    "hex": [
     "#f97316"
    ],
@@ -193,7 +193,7 @@
   },
   {
    "title": "Web Explorer",
-   "winner": "Vic Tutor",
+   "winner": "Sam Tutor",
    "hex": [
     "#f97316"
    ],
@@ -213,7 +213,7 @@
   },
   {
    "title": "Most Hands-On",
-   "winner": "Char Tutor",
+   "winner": "Alex Tutor",
    "hex": [
     "#8b5cf6"
    ],
@@ -498,20 +498,20 @@
   },
   {
    "id": "ff5dfcd2-09b9-49dd-952f-14893da73ab0",
-   "name": "Char Tutor",
+   "name": "Alex Tutor",
    "hasProfile": true,
    "title": "8th Grade Tutor",
-   "job": "Homework tutor for Charlotte Boyd only (8th grade, ~13).",
+   "job": "Homework tutor for Alex Doe only (8th grade, ~13).",
    "jobSource": "profile.json (ff5dfcd2)",
    "color": "violet",
    "hex": "#8b5cf6",
    "shape": "cloud",
    "building": "school",
    "routineNames": [
-    "Char weeknight homework check-in"
+    "Alex weeknight homework check-in"
    ],
    "schedule": [
-    "Char weeknight homework check-in: 5:45 PM daily"
+    "Alex weeknight homework check-in: 5:45 PM daily"
    ],
    "paused": [],
    "rhythm": [],
@@ -578,7 +578,7 @@
     "sentTo": {
      "Dr. EggBot": 2,
      "Michael": 8,
-     "Vic Tutor": 4
+     "Sam Tutor": 4
     },
     "spanMinutes": 10210.6,
     "firstSeenDate": "Sep 8",
@@ -625,7 +625,7 @@
      "daysTalked": 3
     },
     {
-     "from": "Vic Tutor",
+     "from": "Sam Tutor",
      "fromId": "7e4990fe-38aa-4d6d-aa6b-c87baad5f8d1",
      "hex": "#f97316",
      "toYou": 2,
@@ -744,8 +744,8 @@
      "Jim": 1,
      "Brief": 1,
      "Michael": 1,
-     "Char Tutor": 2,
-     "Vic Tutor": 2,
+     "Alex Tutor": 2,
+     "Sam Tutor": 2,
      "Ryan": 1,
      "Boyd Family Times (archive)": 1
     },
@@ -786,7 +786,7 @@
    },
    "signatures": [
     {
-     "from": "Vic Tutor",
+     "from": "Sam Tutor",
      "fromId": "7e4990fe-38aa-4d6d-aa6b-c87baad5f8d1",
      "hex": "#f97316",
      "toYou": 2,
@@ -798,7 +798,7 @@
      "daysTalked": 2
     },
     {
-     "from": "Char Tutor",
+     "from": "Alex Tutor",
      "fromId": "ff5dfcd2-09b9-49dd-952f-14893da73ab0",
      "hex": "#8b5cf6",
      "toYou": 2,
@@ -1389,7 +1389,7 @@
      "Gmail": 74,
      "Slack": 423,
      "Calendar": 147,
-     "Gmail (Miranda)": 39,
+     "Gmail (Jordan)": 39,
      "Drive": 11,
      "Notion": 58,
      "cursor": 1,
@@ -1402,8 +1402,8 @@
      "Jim": 29,
      "Kelly": 6,
      "Dr. EggBot": 1,
-     "Char Tutor": 11,
-     "Vic Tutor": 12
+     "Alex Tutor": 11,
+     "Sam Tutor": 12
     },
     "spanMinutes": 37535.7,
     "firstSeenDate": "Aug 20",
@@ -1474,7 +1474,7 @@
      "daysTalked": 6
     },
     {
-     "from": "Vic Tutor",
+     "from": "Sam Tutor",
      "fromId": "7e4990fe-38aa-4d6d-aa6b-c87baad5f8d1",
      "hex": "#f97316",
      "toYou": 12,
@@ -1486,7 +1486,7 @@
      "daysTalked": 5
     },
     {
-     "from": "Char Tutor",
+     "from": "Alex Tutor",
      "fromId": "ff5dfcd2-09b9-49dd-952f-14893da73ab0",
      "hex": "#8b5cf6",
      "toYou": 8,
@@ -1617,7 +1617,7 @@
     "appCalls": {
      "Gmail": 132,
      "Drive": 151,
-     "Gmail (Miranda)": 49,
+     "Gmail (Jordan)": 49,
      "Composio": 1
     },
     "sentTo": {
@@ -1649,7 +1649,7 @@
    },
    "motto": {
     "text": "Every receipt has a home.",
-    "stat": "151 Google Drive tool calls \u2014 the top app",
+    "stat": "123 Example St tool calls \u2014 the top app",
     "facts": [
      {
       "key": "app:Drive",
@@ -1717,7 +1717,7 @@
     "received": 11,
     "partners": 1,
     "apps": 3,
-    "topApp": "Gmail (Miranda)",
+    "topApp": "Gmail (Jordan)",
     "topAppCalls": 152,
     "hosts": 1,
     "routines": 1,
@@ -1762,7 +1762,7 @@
     ],
     "appCalls": {
      "Calendar": 112,
-     "Gmail (Miranda)": 152,
+     "Gmail (Jordan)": 152,
      "Gmail": 1
     },
     "sentTo": {
@@ -1832,7 +1832,7 @@
    "name": "Path",
    "hasProfile": true,
    "title": "High School Path",
-   "job": "Charlotte Boyd's high-school placement guide (8th grade \u2192 fall 2027).",
+   "job": "Alex Doe's high-school placement guide (8th grade \u2192 fall 2027).",
    "jobSource": "profile.json (fd400f67)",
    "color": "gray",
    "hex": "#94a3b8",
@@ -2318,20 +2318,20 @@
   },
   {
    "id": "7e4990fe-38aa-4d6d-aa6b-c87baad5f8d1",
-   "name": "Vic Tutor",
+   "name": "Sam Tutor",
    "hasProfile": true,
    "title": "6th Grade Tutor",
-   "job": "Homework tutor for Victor Boyd only (6th grade, ~11).",
+   "job": "Homework tutor for Samuel Doe only (6th grade, ~11).",
    "jobSource": "profile.json (7e4990fe)",
    "color": "orange",
    "hex": "#f97316",
    "shape": "cloud",
    "building": "school",
    "routineNames": [
-    "Vic weeknight homework check-in"
+    "Sam weeknight homework check-in"
    ],
    "schedule": [
-    "Vic weeknight homework check-in: 6:15 PM daily"
+    "Sam weeknight homework check-in: 6:15 PM daily"
    ],
    "paused": [],
    "rhythm": [],
@@ -2398,7 +2398,7 @@
     "sentTo": {
      "Dr. EggBot": 2,
      "Michael": 12,
-     "Char Tutor": 2
+     "Alex Tutor": 2
     },
     "spanMinutes": 10210.6,
     "firstSeenDate": "Sep 8",
@@ -2445,7 +2445,7 @@
      "daysTalked": 5
     },
     {
-     "from": "Char Tutor",
+     "from": "Alex Tutor",
      "fromId": "ff5dfcd2-09b9-49dd-952f-14893da73ab0",
      "hex": "#8b5cf6",
      "toYou": 4,

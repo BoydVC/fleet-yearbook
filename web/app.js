@@ -37,7 +37,7 @@ pages.push(i=>`<div class="page paper foreword">${runhead('The Fleet ’26','For
 pages.push(i=>{
   const mx=Math.max(...B.map(b=>b.stats.activities));
   const bars=[...B].sort((a,b)=>b.stats.activities-a.stats.activities).map(b=>`<span>${esc(b.name)}</span><div class="b" style="width:${Math.max(1,b.stats.activities/mx*100).toFixed(1)}%;background:${b.hex}"></div><span class="n" data-bot="${esc(b.name)}" data-k="activities">${n(b.stats.activities)}</span>`).join('');
-  const bt=K.byType, lbl={mcp_tool_call:'app tool calls',shell_command:'shell commands',browser_navigation:'page visits',agent_msg:'bot-to-bot messages',boyd_msg:'messages from Alex',computer_use_session:'computer-use sessions',file_write:'file writes',dated_output:'dated outputs',routine_touch:'routine edits'};
+  const bt=K.byType, lbl={mcp_tool_call:'app tool calls',shell_command:'shell commands',browser_navigation:'page visits',agent_msg:'bot-to-bot messages',alex_msg:'messages from Alex',computer_use_session:'computer-use sessions',file_write:'file writes',dated_output:'dated outputs',routine_touch:'routine edits'};
   return `<div class="page paper stats">${runhead('The Fleet ’26','Class Stats')}<div class="kicker">BY THE NUMBERS</div><h2>Class Stats</h2>
   <div class="big">
    <div><b data-k="classmates">${B.length}</b><span>classmates with a profile${YB.alumni.length?` · plus ${YB.alumni.length} alum`:''}${K.eggs.length?` · ${K.eggs.length} egg still hatching`:''}</span></div>

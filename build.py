@@ -137,7 +137,7 @@ def build():
         s = {
             "toolCalls": tcount["mcp_tool_call"], "shell": tcount["shell_command"], "browse": tcount["browser_navigation"],
             "computerUse": tcount["computer_use_session"], "fileWrites": tcount["file_write"], "outputs": tcount["dated_output"],
-            "boydMsgs": tcount["boyd_msg"],
+            "boydMsgs": tcount["alex_msg"],
             "sent": sum(n for (f, t), n in msgs.items() if f == bid), "received": sum(n for (f, t), n in msgs.items() if t == bid),
             "partners": len(partners), "apps": len(apps), "topApp": apps.most_common(1)[0][0] if apps else None,
             "topAppCalls": apps.most_common(1)[0][1] if apps else 0, "hosts": len(hosts),
@@ -295,7 +295,7 @@ def build():
     klass = {
         "bots": len(bots), "withProfile": sum(1 for x in bots if x["hasProfile"]),
         "events": len(ev), "byType": dict(tc),
-        "messagesBetweenBots": sum(msgs.values()), "messagePairs": len(pairs), "boydMsgs": tc["boyd_msg"],
+        "messagesBetweenBots": sum(msgs.values()), "messagePairs": len(pairs), "boydMsgs": tc["alex_msg"],
         "routines": sum(x["stats"]["routines"] for x in bots), "routinesEnabled": sum(x["stats"]["routinesEnabled"] for x in bots),
         "runs": len(all_runs), "runsOk": sum(1 for _, r in all_runs if r.get("status") == "ok"),
         "firstEvent": min(e["ts"] for e in ev), "lastEvent": max(e["ts"] for e in ev),

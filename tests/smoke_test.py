@@ -68,7 +68,7 @@ def main():
             "activities": len(t), "activeDays": len({et(x).date() for x in t}),
             "sent": sum(n for (f, _), n in msgs.items() if f == i), "received": sum(n for (_, r), n in msgs.items() if r == i),
             "toolCalls": typ["mcp_tool_call"], "shell": typ["shell_command"], "browse": typ["browser_navigation"], "computerUse": typ["computer_use_session"],
-            "fileWrites": typ["file_write"], "outputs": typ["dated_output"], "boydMsgs": typ["boyd_msg"],
+            "fileWrites": typ["file_write"], "outputs": typ["dated_output"], "boydMsgs": typ["alex_msg"],
             "runs": len(runs), "runsOk": sum(1 for r in runs if r.get("status") == "ok"), "routines": len(b.get("routines", [])),
             "artifactWrites30d": b.get("artifactWrites30d", 0), "comicStrips": cast,
             "firstSeen": min(t) if t else None, "hourHist": [sum(1 for x in t if et(x).hour == h) for h in range(24)],
@@ -133,7 +133,7 @@ def main():
         check(all(w.lower() in desc for w in words), f"{b['name']}: job words all come from its profile.json")
     # class + awards
     K = yb["class"]
-    check(K["events"] == len(ev) and K["messagesBetweenBots"] == sum(msgs.values()) and K["boydMsgs"] == sum(1 for e in ev if e["type"] == "boyd_msg"), "class totals recompute")
+    check(K["events"] == len(ev) and K["messagesBetweenBots"] == sum(msgs.values()) and K["boydMsgs"] == sum(1 for e in ev if e["type"] == "alex_msg"), "class totals recompute")
     allruns = [r for b in fleet["bots"] for rt in b.get("routines", []) for r in rt.get("runs", [])]
     check(K["runs"] == len(allruns) and K["runsOk"] == sum(1 for r in allruns if r.get("status") == "ok"), "class routine runs recompute")
     days = collections.Counter(et(e["ts"]).date().isoformat() for e in ev)

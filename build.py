@@ -279,7 +279,7 @@ def build():
                              "first": min(firsts), "busiestDay": bd[0], "busiestDayCount": bd[1], "daysTalked": len(msg_days[k])})
         sigs.sort(key=lambda z: -z["total"])
         if x["stats"]["boydMsgs"]:
-            sigs.append({"from": "Alex", "fromId": "boyd", "hex": "#111827", "boyd": True, "toYou": x["stats"]["boydMsgs"], "fromYou": None, "total": x["stats"]["boydMsgs"]})
+            sigs.append({"from": "Alex", "fromId": "alex", "hex": "#111827", "alex": True, "toYou": x["stats"]["boydMsgs"], "fromYou": None, "total": x["stats"]["boydMsgs"]})
         x["signatures"] = sigs
 
     # ---- class stats + awards

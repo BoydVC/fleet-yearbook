@@ -57,7 +57,7 @@ pages.push(i=>{
 // ---- portraits
 B.forEach(b=>{pages.push(i=>{
   const s=b.stats,c=b.hex,cd=shade(c,-.3),light=['#eab308','#94a3b8','#06b6d4'].includes(c);
-  const sigs=b.signatures.map((g,j)=>g.boyd?`<div class="sig" style="--sc:#111827"><b>Alex</b> — ${n(g.toYou)} messages to you this year. ${SIGNOFF[(j+b.name.length)%SIGNOFF.length]}<small data-sig="Alex" data-to="${g.toYou}">messages from Alex to ${esc(b.name)} in the logs</small></div>`
+  const sigs=b.signatures.map((g,j)=>g.alex?`<div class="sig" style="--sc:#111827"><b>Alex</b> — ${n(g.toYou)} messages to you this year. ${SIGNOFF[(j+b.name.length)%SIGNOFF.length]}<small data-sig="Alex" data-to="${g.toYou}">messages from Alex to ${esc(b.name)} in the logs</small></div>`
     :`<div class="sig" style="--sc:${shade(g.hex,-.25)}"><b>${esc(g.from)}</b> — ${g.toYou} from me, ${g.fromYou} from you, since ${fdate(g.first).replace(/, \d{4}/,'')}. ${SIGNOFF[(j+b.name.length+g.from.length)%SIGNOFF.length]}<small data-sig="${esc(g.from)}" data-to="${g.toYou}" data-from="${g.fromYou}">${g.total} messages over ${g.daysTalked} day${g.daysTalked>1?'s':''} · busiest ${fday(g.busiestDay)} (${g.busiestDayCount})</small></div>`).join('');
   const sp=b.superlative, mo=b.motto;
   return `<div class="page paper portrait" data-bot="${esc(b.name)}" style="--c:${c};--cd:${cd}">${runhead('The Fleet ’26 · Class of 2026',esc(HOME[b.building]||b.building||''))}

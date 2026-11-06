@@ -81,7 +81,7 @@
     {
      "kind": "profile",
      "bot": "Oscar",
-     "quote": "Michael is Chief of Staff and the front door: take specialized money work from Michael or Boyd",
+     "quote": "Michael is Chief of Staff and the front door: take specialized money work from Michael or Alex",
      "source": "~/agent-data/agents/5ea76ec0-2e44-46be-993a-11bc6ba30958/profile.json"
     },
     {
@@ -217,7 +217,7 @@
     },
     {
      "kind": "doctor",
-     "quote": "Two active bots share one job: Boyd Family Times (archive) and Boyd Family Times",
+     "quote": "Two active bots share one job: Lakeside Family Times (archive) and Lakeside Family Times",
      "label": null,
      "source": "/workspace/tokenmax/bot-island/reports/fleet-health-2026-10-07.html"
     },
@@ -336,7 +336,7 @@
     },
     {
      "kind": "profile",
-     "bot": "Boyd Family Times",
+     "bot": "Lakeside Family Times",
      "quote": "Keep this chat short — editions live as PDFs, not a growing archive of every past issue.",
      "source": "~/agent-data/agents/784bedfc-74d6-45a0-a291-762ff05bb0c6/profile.json"
     },
@@ -349,13 +349,13 @@
     {
      "kind": "profile",
      "bot": "Oscar",
-     "quote": "Household: Boyd (Christopher Boyd), wife Jordan (Randi).",
+     "quote": "Household: Alex (Alex Rivera), wife Jordan (Sam).",
      "source": "~/agent-data/agents/5ea76ec0-2e44-46be-993a-11bc6ba30958/profile.json"
     },
     {
      "kind": "profile",
      "bot": "Pam",
-     "quote": "Household: Jordan; kids Alex (Alex, 2/12/2013) and Samuel (Sam, 6/23/2015) only.",
+     "quote": "Household: Jordan; kids Alex (Alex, 3/15/2013) and Samuel (Sam, 8/10/2015) only.",
      "source": "~/agent-data/agents/e1bfeb52-89c2-48fa-b6dd-b4dcf9ed54e1/profile.json"
     }
    ],
@@ -386,7 +386,7 @@
      "because": "Only Family Times and Pods say \"keep this chat short\""
     }
    ],
-   "next": "Create one shared \"Boyd household & decisions\" note (family, schools, institutions, standing decisions) and have Oscar, Pam, Path and the tutors point to it instead of each carrying its own copy. A fact then only has to be fixed in one place.",
+   "next": "Create one shared \"Rivera household & decisions\" note (family, schools, institutions, standing decisions) and have Oscar, Pam, Path and the tutors point to it instead of each carrying its own copy. A fact then only has to be fixed in one place.",
    "score": 3.5
   },
   {
@@ -552,7 +552,7 @@
    "fleet": [
     {
      "kind": "fact",
-     "text": "9 workflow skills on the box: Design a Grok Bot, Draft as Boyd, Jim Chrome history recovery, Make Bot UI, Morning newspaper bootstrap, Newspaper silent-print verify, PowerSchool own-browser grades, Routine healthcheck, Transcript healthcheck.",
+     "text": "9 workflow skills on the box: Design a Grok Bot, Draft as Alex, Jim Chrome history recovery, Make Bot UI, Morning newspaper bootstrap, Newspaper silent-print verify, PowerSchool own-browser grades, Routine healthcheck, Transcript healthcheck.",
      "source": "~/agent-data/workflows/*/SKILL.md",
      "how": "directory listing"
     },
@@ -829,7 +829,7 @@
     },
     {
      "kind": "fact",
-     "text": "9 of 15 configured bots carry a never-invent rule (Boyd Family Times, Alex Tutor, Jim, Oscar, Pam, Path, Pods, Ryan, Sam Tutor).",
+     "text": "9 of 15 configured bots carry a never-invent rule (Lakeside Family Times, Alex Tutor, Jim, Oscar, Pam, Path, Pods, Ryan, Sam Tutor).",
      "source": "profile.json ×15",
      "how": "regex \"never invent|do not invent\""
     },
@@ -1087,7 +1087,7 @@
     },
     {
      "kind": "doctor",
-     "quote": "Boyd Family Times (archive): “Morning Boyd Family Times” ≈ 108 agent-minutes/week",
+     "quote": "Lakeside Family Times (archive): “Morning Lakeside Family Times” ≈ 108 agent-minutes/week",
      "label": null,
      "source": "/workspace/tokenmax/bot-island/reports/fleet-health-2026-10-07.html"
     },
@@ -1200,7 +1200,7 @@
     {
      "kind": "skill",
      "skill": "PowerSchool own-browser grades",
-     "quote": "Concurrent Alex + Sam sessions kick each other and force Boyd to re-enter credentials.",
+     "quote": "Concurrent Alex + Sam sessions kick each other and force Alex to re-enter credentials.",
      "source": "~/agent-data/workflows/powerschool-own-browser-grades/SKILL.md"
     },
     {
@@ -1376,7 +1376,7 @@
    "minutes": "10 min",
    "impact": "≈108 agent-minutes/week back (the largest line on the cost table) and one owner for the newspaper",
    "evidence": "Fleet Doctor: duplication + token-heavy findings",
-   "how": "Confirm the live Boyd Family Times bot is current, then pause \"Morning Boyd Family Times\" on the archive bot.",
+   "how": "Confirm the live Lakeside Family Times bot is current, then pause \"Morning Lakeside Family Times\" on the archive bot.",
    "rank": 1
   },
   {
@@ -1451,7 +1451,7 @@
    ],
    "effort": "M",
    "minutes": "1 h",
-   "impact": "Fewer PDF-only mornings, and Boyd hears when printing is skipped",
+   "impact": "Fewer PDF-only mornings, and Alex hears when printing is skipped",
    "evidence": "Fleet Doctor: 4 of the last 7 editions PDF-only",
    "how": "Before rendering, wake/ping the HP. Fall back to a second printer. Say \"PDF only today\" when skipped.",
    "rank": 7
@@ -1499,7 +1499,7 @@
  "facts": {
   "configured": 15,
   "anti": [
-   "Boyd Family Times",
+   "Lakeside Family Times",
    "Brief",
    "Alex Tutor",
    "Dwight",
@@ -1509,7 +1509,7 @@
    "Sam Tutor"
   ],
   "only": [
-   "Boyd Family Times",
+   "Lakeside Family Times",
    "Alex Tutor",
    "Dwight",
    "Path",
@@ -1530,7 +1530,7 @@
    "Sam Tutor"
   ],
   "noinv": [
-   "Boyd Family Times",
+   "Lakeside Family Times",
    "Alex Tutor",
    "Jim",
    "Oscar",
@@ -1541,7 +1541,7 @@
    "Sam Tutor"
   ],
   "mentions_michael": [
-   "Boyd Family Times",
+   "Lakeside Family Times",
    "Brief",
    "Dwight",
    "Jim",
@@ -1572,7 +1572,7 @@
  },
  "fleet": [
   {
-   "name": "Boyd Family Times",
+   "name": "Lakeside Family Times",
    "title": "",
    "anti": true,
    "only": true,

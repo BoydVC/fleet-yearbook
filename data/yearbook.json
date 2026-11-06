@@ -650,9 +650,9 @@
     },
     {
      "from": "Alex",
-     "fromId": "boyd",
+     "fromId": "alex",
      "hex": "#111827",
-     "boyd": true,
+     "alex": true,
      "toYou": 2,
      "fromYou": null,
      "total": 2
@@ -871,9 +871,9 @@
     },
     {
      "from": "Alex",
-     "fromId": "boyd",
+     "fromId": "alex",
      "hex": "#111827",
-     "boyd": true,
+     "alex": true,
      "toYou": 10,
      "fromYou": null,
      "total": 10
@@ -996,9 +996,9 @@
    "signatures": [
     {
      "from": "Alex",
-     "fromId": "boyd",
+     "fromId": "alex",
      "hex": "#111827",
-     "boyd": true,
+     "alex": true,
      "toYou": 2,
      "fromYou": null,
      "total": 2
@@ -1170,9 +1170,9 @@
     },
     {
      "from": "Alex",
-     "fromId": "boyd",
+     "fromId": "alex",
      "hex": "#111827",
-     "boyd": true,
+     "alex": true,
      "toYou": 16,
      "fromYou": null,
      "total": 16
@@ -1523,9 +1523,9 @@
     },
     {
      "from": "Alex",
-     "fromId": "boyd",
+     "fromId": "alex",
      "hex": "#111827",
-     "boyd": true,
+     "alex": true,
      "toYou": 57,
      "fromYou": null,
      "total": 57
@@ -1673,9 +1673,9 @@
     },
     {
      "from": "Alex",
-     "fromId": "boyd",
+     "fromId": "alex",
      "hex": "#111827",
-     "boyd": true,
+     "alex": true,
      "toYou": 4,
      "fromYou": null,
      "total": 4
@@ -1818,9 +1818,9 @@
     },
     {
      "from": "Alex",
-     "fromId": "boyd",
+     "fromId": "alex",
      "hex": "#111827",
-     "boyd": true,
+     "alex": true,
      "toYou": 3,
      "fromYou": null,
      "total": 3
@@ -2198,9 +2198,9 @@
     },
     {
      "from": "Alex",
-     "fromId": "boyd",
+     "fromId": "alex",
      "hex": "#111827",
-     "boyd": true,
+     "alex": true,
      "toYou": 1,
      "fromYou": null,
      "total": 1
@@ -2470,9 +2470,9 @@
     },
     {
      "from": "Alex",
-     "fromId": "boyd",
+     "fromId": "alex",
      "hex": "#111827",
-     "boyd": true,
+     "alex": true,
      "toYou": 5,
      "fromYou": null,
      "total": 5
@@ -2582,9 +2582,9 @@
     },
     {
      "from": "Alex",
-     "fromId": "boyd",
+     "fromId": "alex",
      "hex": "#111827",
-     "boyd": true,
+     "alex": true,
      "toYou": 13,
      "fromYou": null,
      "total": 13

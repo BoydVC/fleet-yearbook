@@ -118,7 +118,7 @@ def main():
             check(b["superlative"]["title"].startswith("Most likely to"), f"{b['name']} superlative is a 'most likely to…'")
         # signatures
         for g in b.get("signatures", []):
-            if g.get("boyd"):
+            if g.get("alex"):
                 check(g["toYou"] == e["boydMsgs"], f"{b['name']}: Alex signature count {g['toYou']}")
             else:
                 fid = next(k for k, v in names.items() if v == g["from"])

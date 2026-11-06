@@ -104,7 +104,7 @@
    "New Bot"
   ],
   "alumni": [
-   "Boyd Family Times (archive)"
+   "Lakeside Family Times (archive)"
   ],
   "comicStrips": 11
  },
@@ -131,12 +131,12 @@
    "value": 9
   },
   {
-   "title": "Most Messages from Boyd",
+   "title": "Most Messages from Alex",
    "winner": "Michael",
    "hex": [
     "#ef4444"
    ],
-   "stat": "57 messages from Boyd in the logs",
+   "stat": "57 messages from Alex in the logs",
    "key": "boydMsgs",
    "value": 57
   },
@@ -152,7 +152,7 @@
   },
   {
    "title": "Early Bird",
-   "winner": "Boyd Family Times",
+   "winner": "Lakeside Family Times",
    "hex": [
     "#94a3b8"
    ],
@@ -255,10 +255,10 @@
  "bots": [
   {
    "id": "784bedfc-74d6-45a0-a291-762ff05bb0c6",
-   "name": "Boyd Family Times",
+   "name": "Lakeside Family Times",
    "hasProfile": true,
    "title": "",
-   "job": "The Boyd Family Times \u2014 Boyd's daily household newspaper.",
+   "job": "The Lakeside Family Times \u2014 Alex's daily household newspaper.",
    "jobSource": "profile.json (784bedfc)",
    "color": "gray",
    "hex": "#94a3b8",
@@ -365,7 +365,7 @@
    "name": "Brief",
    "hasProfile": true,
    "title": "Morning Brief",
-   "job": "Prepares Boyd's weekday morning attention brief.",
+   "job": "Prepares Alex's weekday morning attention brief.",
    "jobSource": "profile.json (84ee99ac)",
    "color": "blue",
    "hex": "#3b82f6",
@@ -649,7 +649,7 @@
      "daysTalked": 2
     },
     {
-     "from": "Boyd",
+     "from": "Alex",
      "fromId": "boyd",
      "hex": "#111827",
      "boyd": true,
@@ -747,7 +747,7 @@
      "Alex Tutor": 2,
      "Sam Tutor": 2,
      "Ryan": 1,
-     "Boyd Family Times (archive)": 1
+     "Lakeside Family Times (archive)": 1
     },
     "spanMinutes": 15247.5,
     "firstSeenDate": "Sep 4",
@@ -810,7 +810,7 @@
      "daysTalked": 2
     },
     {
-     "from": "Boyd Family Times (archive)",
+     "from": "Lakeside Family Times (archive)",
      "fromId": "4b4afba1-ebe0-403c-8502-451e00717b07",
      "hex": "#94a3b8",
      "toYou": 1,
@@ -870,7 +870,7 @@
      "daysTalked": 1
     },
     {
-     "from": "Boyd",
+     "from": "Alex",
      "fromId": "boyd",
      "hex": "#111827",
      "boyd": true,
@@ -885,7 +885,7 @@
    "name": "Dwight",
    "hasProfile": true,
    "title": "Code Monkey",
-   "job": "Boyd's software engineer. Ships code changes.",
+   "job": "Alex's software engineer. Ships code changes.",
    "jobSource": "profile.json (d0afda46)",
    "color": "yellow",
    "hex": "#eab308",
@@ -995,7 +995,7 @@
    },
    "signatures": [
     {
-     "from": "Boyd",
+     "from": "Alex",
      "fromId": "boyd",
      "hex": "#111827",
      "boyd": true,
@@ -1010,7 +1010,7 @@
    "name": "Jim",
    "hasProfile": true,
    "title": "Interests",
-   "job": "Boyd's interest and research specialist.",
+   "job": "Alex's interest and research specialist.",
    "jobSource": "profile.json (9abbfaf4)",
    "color": "blue",
    "hex": "#3b82f6",
@@ -1117,7 +1117,7 @@
     "title": "Most likely to show up every single day"
    },
    "motto": {
-    "text": "If Boyd saved it, I've read it.",
+    "text": "If Alex saved it, I've read it.",
     "stat": "80 Notion tool calls \u00b7 3 scheduled routines",
     "facts": [
      {
@@ -1169,7 +1169,7 @@
      "daysTalked": 1
     },
     {
-     "from": "Boyd",
+     "from": "Alex",
      "fromId": "boyd",
      "hex": "#111827",
      "boyd": true,
@@ -1184,7 +1184,7 @@
    "name": "Kelly",
    "hasProfile": true,
    "title": "Trends",
-   "job": "Boyd's real-time web and X analyst.",
+   "job": "Alex's real-time web and X analyst.",
    "jobSource": "profile.json (3e3aaa23)",
    "color": "yellow",
    "hex": "#eab308",
@@ -1522,7 +1522,7 @@
      "daysTalked": 1
     },
     {
-     "from": "Boyd",
+     "from": "Alex",
      "fromId": "boyd",
      "hex": "#111827",
      "boyd": true,
@@ -1537,7 +1537,7 @@
    "name": "Oscar",
    "hasProfile": true,
    "title": "Finances",
-   "job": "Boyd's finance specialist. Owns cash, bills, investments, retirement, and taxes.",
+   "job": "Alex's finance specialist. Owns cash, bills, investments, retirement, and taxes.",
    "jobSource": "profile.json (5ea76ec0)",
    "color": "green",
    "hex": "#22c55e",
@@ -1672,7 +1672,7 @@
      "daysTalked": 6
     },
     {
-     "from": "Boyd",
+     "from": "Alex",
      "fromId": "boyd",
      "hex": "#111827",
      "boyd": true,
@@ -1687,7 +1687,7 @@
    "name": "Pam",
    "hasProfile": true,
    "title": "Family Logistics",
-   "job": "Boyd's family logistics specialist.",
+   "job": "Alex's family logistics specialist.",
    "jobSource": "profile.json (e1bfeb52)",
    "color": "cyan",
    "hex": "#06b6d4",
@@ -1817,7 +1817,7 @@
      "daysTalked": 16
     },
     {
-     "from": "Boyd",
+     "from": "Alex",
      "fromId": "boyd",
      "hex": "#111827",
      "boyd": true,
@@ -1947,7 +1947,7 @@
    "name": "Pods",
    "hasProfile": true,
    "title": "",
-   "job": "Boyd's daily podcast/YouTube listen brief.",
+   "job": "Alex's daily podcast/YouTube listen brief.",
    "jobSource": "profile.json (ed1121b7)",
    "color": "gray",
    "hex": "#94a3b8",
@@ -2058,7 +2058,7 @@
    "name": "Ryan",
    "hasProfile": true,
    "title": "Entrepreneur",
-   "job": "Boyd's Entrepreneur. Spots possible new business ideas and side-hustles for him, ranked and concrete.",
+   "job": "Alex's Entrepreneur. Spots possible new business ideas and side-hustles for him, ranked and concrete.",
    "jobSource": "profile.json (6a33ea82)",
    "color": "red",
    "hex": "#ef4444",
@@ -2197,7 +2197,7 @@
      "daysTalked": 1
     },
     {
-     "from": "Boyd",
+     "from": "Alex",
      "fromId": "boyd",
      "hex": "#111827",
      "boyd": true,
@@ -2212,7 +2212,7 @@
    "name": "TokenMax",
    "hasProfile": true,
    "title": "",
-   "job": "Boyd's use-it-or-lose-it builder. Makes sure the included usage on Boyd's Cursor / Grok Bot subscription never expires unused.",
+   "job": "Alex's use-it-or-lose-it builder. Makes sure the included usage on Alex's Cursor / Grok Bot subscription never expires unused.",
    "jobSource": "profile.json (b56dd939)",
    "color": "magenta",
    "hex": "#d946ef",
@@ -2469,7 +2469,7 @@
      "daysTalked": 2
     },
     {
-     "from": "Boyd",
+     "from": "Alex",
      "fromId": "boyd",
      "hex": "#111827",
      "boyd": true,
@@ -2483,7 +2483,7 @@
  "alumni": [
   {
    "id": "4b4afba1-ebe0-403c-8502-451e00717b07",
-   "name": "Boyd Family Times (archive)",
+   "name": "Lakeside Family Times (archive)",
    "hasProfile": false,
    "title": "Morning Newspaper",
    "job": "Morning Newspaper",
@@ -2493,7 +2493,7 @@
    "shape": "squircle",
    "building": "press",
    "routineNames": [
-    "Morning Boyd Family Times"
+    "Morning Lakeside Family Times"
    ],
    "schedule": [],
    "paused": [],
@@ -2581,7 +2581,7 @@
      "daysTalked": 1
     },
     {
-     "from": "Boyd",
+     "from": "Alex",
      "fromId": "boyd",
      "hex": "#111827",
      "boyd": true,

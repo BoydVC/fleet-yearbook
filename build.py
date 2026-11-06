@@ -215,7 +215,7 @@ def build():
         "Michael": (("Most likely to delegate it to exactly the right bot", ["sent", "partners"], "Sent {sent} messages to {partners} classmates", "sent"),
                     ("My door (and inbox) is always open.", ["received"], "Received {received} messages from classmates", "received")),
         "Jim": (("Most likely to show up every single day", ["activeDays"], "Active on {activeDays} different days", "activeDays"),
-                ("If Boyd saved it, I've read it.", ["app:Notion", "routines"], "{app:Notion} Notion tool calls · {routines} scheduled routines", "routines")),
+                ("If Alex saved it, I've read it.", ["app:Notion", "routines"], "{app:Notion} Notion tool calls · {routines} scheduled routines", "routines")),
         "Oscar": (("Most likely to never miss a bill", ["runsOk", "runs", "routines"], "{runsOk} of {runs} routine runs finished OK across {routines} routines", "routines"),
                   ("Every receipt has a home.", ["app:Drive"], "{app:Drive} Google Drive tool calls — the top app", "app:Drive")),
         "Pam": (("Most likely to have the week sorted by 7:30 AM", ["runsOk", "runs"], "{runsOk} of {runs} weekday calendar scans finished OK", None),
@@ -232,7 +232,7 @@ def build():
                       ("Quick check-ins, big wins.", ["medianRunMin"], "Median check-in run: {medianRunMin} min", "medianRunMin")),
         "Brief": (("Most likely to read your calendar before you do", ["app:Calendar", "toolCalls"], "{app:Calendar} of its {toolCalls} tool calls were Calendar", None),
                   ("Everything you need by 8 AM.", ["runsOk", "runs"], "{runsOk} of {runs} morning brief runs finished OK", None)),
-        "Boyd Family Times": (("Most likely to make headlines", ["outputs"], "{outputs} dated editions logged", "outputs"),
+        "Lakeside Family Times": (("Most likely to make headlines", ["outputs"], "{outputs} dated editions logged", "outputs"),
                               ("All the news that fits, before sunrise.", ["medianTime"], "Typical activity time: {medianTime}", "medianTime")),
         "Pods": (("Most likely to have your playlist ready", ["fileWrites", "activeDays"], "{fileWrites} files written across {activeDays} days", None),
                  ("Fresh episodes, early.", ["medianTime"], "Typical activity time: {medianTime}", None)),
@@ -279,7 +279,7 @@ def build():
                              "first": min(firsts), "busiestDay": bd[0], "busiestDayCount": bd[1], "daysTalked": len(msg_days[k])})
         sigs.sort(key=lambda z: -z["total"])
         if x["stats"]["boydMsgs"]:
-            sigs.append({"from": "Boyd", "fromId": "boyd", "hex": "#111827", "boyd": True, "toYou": x["stats"]["boydMsgs"], "fromYou": None, "total": x["stats"]["boydMsgs"]})
+            sigs.append({"from": "Alex", "fromId": "boyd", "hex": "#111827", "boyd": True, "toYou": x["stats"]["boydMsgs"], "fromYou": None, "total": x["stats"]["boydMsgs"]})
         x["signatures"] = sigs
 
     # ---- class stats + awards
@@ -323,7 +323,7 @@ def build():
     awards = [{"title": "Best Duo", "winner": " & ".join(duo_names), "stat": f"{duo_n} messages between them — the most of any pair",
                "hex": [next(x["hex"] for x in bots if x["name"] == n) for n in duo_names], "key": "pair", "value": duo_n}]
     award("Biggest Toolbox", top("apps"), "Used {v} different apps")
-    award("Most Messages from Boyd", top("boydMsgs"), "{v} messages from Boyd in the logs")
+    award("Most Messages from Alex", top("boydMsgs"), "{v} messages from Alex in the logs")
     award("Marathon Day", top("busiestDayCount"), "{v} logged actions in a single day")
     award("Early Bird", top("medianHour", True, lambda v: next(x["stats"]["medianTime"] for x in kb if x["stats"]["medianHour"] == v)), "Typical activity time: {v}")
     award("Night Owl", top("medianHour", False, lambda v: next(x["stats"]["medianTime"] for x in kb if x["stats"]["medianHour"] == v)), "Typical activity time: {v}")

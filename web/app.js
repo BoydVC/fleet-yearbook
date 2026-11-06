@@ -37,13 +37,13 @@ pages.push(i=>`<div class="page paper foreword">${runhead('The Fleet ’26','For
 pages.push(i=>{
   const mx=Math.max(...B.map(b=>b.stats.activities));
   const bars=[...B].sort((a,b)=>b.stats.activities-a.stats.activities).map(b=>`<span>${esc(b.name)}</span><div class="b" style="width:${Math.max(1,b.stats.activities/mx*100).toFixed(1)}%;background:${b.hex}"></div><span class="n" data-bot="${esc(b.name)}" data-k="activities">${n(b.stats.activities)}</span>`).join('');
-  const bt=K.byType, lbl={mcp_tool_call:'app tool calls',shell_command:'shell commands',browser_navigation:'page visits',agent_msg:'bot-to-bot messages',boyd_msg:'messages from Boyd',computer_use_session:'computer-use sessions',file_write:'file writes',dated_output:'dated outputs',routine_touch:'routine edits'};
+  const bt=K.byType, lbl={mcp_tool_call:'app tool calls',shell_command:'shell commands',browser_navigation:'page visits',agent_msg:'bot-to-bot messages',boyd_msg:'messages from Alex',computer_use_session:'computer-use sessions',file_write:'file writes',dated_output:'dated outputs',routine_touch:'routine edits'};
   return `<div class="page paper stats">${runhead('The Fleet ’26','Class Stats')}<div class="kicker">BY THE NUMBERS</div><h2>Class Stats</h2>
   <div class="big">
    <div><b data-k="classmates">${B.length}</b><span>classmates with a profile${YB.alumni.length?` · plus ${YB.alumni.length} alum`:''}${K.eggs.length?` · ${K.eggs.length} egg still hatching`:''}</span></div>
    <div><b data-k="events">${n(K.events)}</b><span>logged events, ${fdate(K.firstEvent)} – ${fdate(K.lastEvent)}</span></div>
    <div><b data-k="messagesBetweenBots">${n(K.messagesBetweenBots)}</b><span>bot-to-bot messages across ${K.messagePairs} pairs</span></div>
-   <div><b data-k="boydMsgs">${n(K.boydMsgs)}</b><span>messages from Boyd</span></div>
+   <div><b data-k="boydMsgs">${n(K.boydMsgs)}</b><span>messages from Alex</span></div>
    <div><b data-k="runs">${n(K.runsOk)}/${n(K.runs)}</b><span>routine runs finished OK (${K.routines} routines, ${K.routinesEnabled} enabled)</span></div>
    <div><b data-k="activeDays">${K.activeDays}</b><span>days with logged activity</span></div>
    <div><b>${fday(K.busiestDay)}</b><span>busiest day: ${n(K.busiestDayCount)} events (ET)</span></div>
@@ -57,7 +57,7 @@ pages.push(i=>{
 // ---- portraits
 B.forEach(b=>{pages.push(i=>{
   const s=b.stats,c=b.hex,cd=shade(c,-.3),light=['#eab308','#94a3b8','#06b6d4'].includes(c);
-  const sigs=b.signatures.map((g,j)=>g.boyd?`<div class="sig" style="--sc:#111827"><b>Boyd</b> — ${n(g.toYou)} messages to you this year. ${SIGNOFF[(j+b.name.length)%SIGNOFF.length]}<small data-sig="Boyd" data-to="${g.toYou}">messages from Boyd to ${esc(b.name)} in the logs</small></div>`
+  const sigs=b.signatures.map((g,j)=>g.boyd?`<div class="sig" style="--sc:#111827"><b>Alex</b> — ${n(g.toYou)} messages to you this year. ${SIGNOFF[(j+b.name.length)%SIGNOFF.length]}<small data-sig="Alex" data-to="${g.toYou}">messages from Alex to ${esc(b.name)} in the logs</small></div>`
     :`<div class="sig" style="--sc:${shade(g.hex,-.25)}"><b>${esc(g.from)}</b> — ${g.toYou} from me, ${g.fromYou} from you, since ${fdate(g.first).replace(/, \d{4}/,'')}. ${SIGNOFF[(j+b.name.length+g.from.length)%SIGNOFF.length]}<small data-sig="${esc(g.from)}" data-to="${g.toYou}" data-from="${g.fromYou}">${g.total} messages over ${g.daysTalked} day${g.daysTalked>1?'s':''} · busiest ${fday(g.busiestDay)} (${g.busiestDayCount})</small></div>`).join('');
   const sp=b.superlative, mo=b.motto;
   return `<div class="page paper portrait" data-bot="${esc(b.name)}" style="--c:${c};--cd:${cd}">${runhead('The Fleet ’26 · Class of 2026',esc(HOME[b.building]||b.building||''))}

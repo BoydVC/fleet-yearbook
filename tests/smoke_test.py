@@ -119,7 +119,7 @@ def main():
         # signatures
         for g in b.get("signatures", []):
             if g.get("boyd"):
-                check(g["toYou"] == e["boydMsgs"], f"{b['name']}: Boyd signature count {g['toYou']}")
+                check(g["toYou"] == e["boydMsgs"], f"{b['name']}: Alex signature count {g['toYou']}")
             else:
                 fid = next(k for k, v in names.items() if v == g["from"])
                 check(g["toYou"] == msgs.get((fid, b["id"]), 0) and g["fromYou"] == msgs.get((b["id"], fid), 0), f"{b['name']}: {g['from']} signature {g['toYou']}/{g['fromYou']}")
@@ -175,8 +175,8 @@ def main():
             check(html.escape(b["job"], quote=False) in pg, f"[{label}] {b['name']} job line displayed")
             for sg in re.findall(r'data-sig="([^"]+)" data-to="(\d+)"(?: data-from="(\d+)")?', pg):
                 frm = html.unescape(sg[0])
-                if frm == "Boyd":
-                    check(int(sg[1]) == e["boydMsgs"], f"[{label}] {b['name']} Boyd signature")
+                if frm == "Alex":
+                    check(int(sg[1]) == e["boydMsgs"], f"[{label}] {b['name']} Alex signature")
                 else:
                     fid = next(k for k, v in names.items() if v == frm)
                     check(int(sg[1]) == msgs[(fid, b["id"])] if (fid, b["id"]) in msgs else int(sg[1]) == 0, f"[{label}] {b['name']} ← {frm} count")

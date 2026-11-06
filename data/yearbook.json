@@ -7,7 +7,7 @@
   "fleet": {
    "path": "/workspace/tokenmax/bot-island/data/fleet.json",
    "archived": "data/sources/fleet.json",
-   "sha256": "036c21df310208899dc99c0cc73335898f3de24923414f343ed0985069ff9a04",
+   "sha256": "d7c5138cf55bf5965d31e007980c941016bc4b85dc84d6dbae118a12b36b81fc",
    "mtime": "2026-10-07T19:55:50.026180+00:00"
   },
   "playbook": {
@@ -39,7 +39,7 @@
   "withProfile": 15,
   "events": 3960,
   "byType": {
-   "boyd_msg": 113,
+   "alex_msg": 113,
    "mcp_tool_call": 1752,
    "agent_msg": 223,
    "shell_command": 1304,

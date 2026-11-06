@@ -137,7 +137,7 @@ def build():
         s = {
             "toolCalls": tcount["mcp_tool_call"], "shell": tcount["shell_command"], "browse": tcount["browser_navigation"],
             "computerUse": tcount["computer_use_session"], "fileWrites": tcount["file_write"], "outputs": tcount["dated_output"],
-            "boydMsgs": tcount["alex_msg"],
+            "alexMsgs": tcount["alex_msg"],
             "sent": sum(n for (f, t), n in msgs.items() if f == bid), "received": sum(n for (f, t), n in msgs.items() if t == bid),
             "partners": len(partners), "apps": len(apps), "topApp": apps.most_common(1)[0][0] if apps else None,
             "topAppCalls": apps.most_common(1)[0][1] if apps else 0, "hosts": len(hosts),
@@ -278,8 +278,8 @@ def build():
                 sigs.append({"from": y["name"], "fromId": y["id"], "hex": y["hex"], "toYou": a, "fromYou": b_, "total": a + b_,
                              "first": min(firsts), "busiestDay": bd[0], "busiestDayCount": bd[1], "daysTalked": len(msg_days[k])})
         sigs.sort(key=lambda z: -z["total"])
-        if x["stats"]["boydMsgs"]:
-            sigs.append({"from": "Alex", "fromId": "alex", "hex": "#111827", "alex": True, "toYou": x["stats"]["boydMsgs"], "fromYou": None, "total": x["stats"]["boydMsgs"]})
+        if x["stats"]["alexMsgs"]:
+            sigs.append({"from": "Alex", "fromId": "alex", "hex": "#111827", "alex": True, "toYou": x["stats"]["alexMsgs"], "fromYou": None, "total": x["stats"]["alexMsgs"]})
         x["signatures"] = sigs
 
     # ---- class stats + awards
@@ -295,7 +295,7 @@ def build():
     klass = {
         "bots": len(bots), "withProfile": sum(1 for x in bots if x["hasProfile"]),
         "events": len(ev), "byType": dict(tc),
-        "messagesBetweenBots": sum(msgs.values()), "messagePairs": len(pairs), "boydMsgs": tc["alex_msg"],
+        "messagesBetweenBots": sum(msgs.values()), "messagePairs": len(pairs), "alexMsgs": tc["alex_msg"],
         "routines": sum(x["stats"]["routines"] for x in bots), "routinesEnabled": sum(x["stats"]["routinesEnabled"] for x in bots),
         "runs": len(all_runs), "runsOk": sum(1 for _, r in all_runs if r.get("status") == "ok"),
         "firstEvent": min(e["ts"] for e in ev), "lastEvent": max(e["ts"] for e in ev),
@@ -323,7 +323,7 @@ def build():
     awards = [{"title": "Best Duo", "winner": " & ".join(duo_names), "stat": f"{duo_n} messages between them — the most of any pair",
                "hex": [next(x["hex"] for x in bots if x["name"] == n) for n in duo_names], "key": "pair", "value": duo_n}]
     award("Biggest Toolbox", top("apps"), "Used {v} different apps")
-    award("Most Messages from Alex", top("boydMsgs"), "{v} messages from Alex in the logs")
+    award("Most Messages from Alex", top("alexMsgs"), "{v} messages from Alex in the logs")
     award("Marathon Day", top("busiestDayCount"), "{v} logged actions in a single day")
     award("Early Bird", top("medianHour", True, lambda v: next(x["stats"]["medianTime"] for x in kb if x["stats"]["medianHour"] == v)), "Typical activity time: {v}")
     award("Night Owl", top("medianHour", False, lambda v: next(x["stats"]["medianTime"] for x in kb if x["stats"]["medianHour"] == v)), "Typical activity time: {v}")

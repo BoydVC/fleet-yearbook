@@ -43,7 +43,7 @@ pages.push(i=>{
    <div><b data-k="classmates">${B.length}</b><span>classmates with a profile${YB.alumni.length?` · plus ${YB.alumni.length} alum`:''}${K.eggs.length?` · ${K.eggs.length} egg still hatching`:''}</span></div>
    <div><b data-k="events">${n(K.events)}</b><span>logged events, ${fdate(K.firstEvent)} – ${fdate(K.lastEvent)}</span></div>
    <div><b data-k="messagesBetweenBots">${n(K.messagesBetweenBots)}</b><span>bot-to-bot messages across ${K.messagePairs} pairs</span></div>
-   <div><b data-k="boydMsgs">${n(K.boydMsgs)}</b><span>messages from Alex</span></div>
+   <div><b data-k="alexMsgs">${n(K.alexMsgs)}</b><span>messages from Alex</span></div>
    <div><b data-k="runs">${n(K.runsOk)}/${n(K.runs)}</b><span>routine runs finished OK (${K.routines} routines, ${K.routinesEnabled} enabled)</span></div>
    <div><b data-k="activeDays">${K.activeDays}</b><span>days with logged activity</span></div>
    <div><b>${fday(K.busiestDay)}</b><span>busiest day: ${n(K.busiestDayCount)} events (ET)</span></div>

@@ -68,7 +68,7 @@ def main():
             "activities": len(t), "activeDays": len({et(x).date() for x in t}),
             "sent": sum(n for (f, _), n in msgs.items() if f == i), "received": sum(n for (_, r), n in msgs.items() if r == i),
             "toolCalls": typ["mcp_tool_call"], "shell": typ["shell_command"], "browse": typ["browser_navigation"], "computerUse": typ["computer_use_session"],
-            "fileWrites": typ["file_write"], "outputs": typ["dated_output"], "boydMsgs": typ["alex_msg"],
+            "fileWrites": typ["file_write"], "outputs": typ["dated_output"], "alexMsgs": typ["alex_msg"],
             "runs": len(runs), "runsOk": sum(1 for r in runs if r.get("status") == "ok"), "routines": len(b.get("routines", [])),
             "artifactWrites30d": b.get("artifactWrites30d", 0), "comicStrips": cast,
             "firstSeen": min(t) if t else None, "hourHist": [sum(1 for x in t if et(x).hour == h) for h in range(24)],
@@ -102,7 +102,7 @@ def main():
     for b in yb["bots"] + yb["alumni"]:
         s, e = b["stats"], exp[b["name"]]
         for k in ("activities", "activeDays", "sent", "received", "toolCalls", "shell", "browse", "computerUse", "fileWrites", "outputs",
-                  "boydMsgs", "runs", "runsOk", "routines", "artifactWrites30d", "comicStrips", "firstSeen", "hourHist", "partners", "hosts"):
+                  "alexMsgs", "runs", "runsOk", "routines", "artifactWrites30d", "comicStrips", "firstSeen", "hourHist", "partners", "hosts"):
             check(s[k] == e[k], f"{b['name']}: {k}={s[k]} recomputes to {e[k]}")
         for which in ("superlative", "motto"):
             c = b.get(which)
@@ -119,7 +119,7 @@ def main():
         # signatures
         for g in b.get("signatures", []):
             if g.get("alex"):
-                check(g["toYou"] == e["boydMsgs"], f"{b['name']}: Alex signature count {g['toYou']}")
+                check(g["toYou"] == e["alexMsgs"], f"{b['name']}: Alex signature count {g['toYou']}")
             else:
                 fid = next(k for k, v in names.items() if v == g["from"])
                 check(g["toYou"] == msgs.get((fid, b["id"]), 0) and g["fromYou"] == msgs.get((b["id"], fid), 0), f"{b['name']}: {g['from']} signature {g['toYou']}/{g['fromYou']}")
@@ -133,7 +133,7 @@ def main():
         check(all(w.lower() in desc for w in words), f"{b['name']}: job words all come from its profile.json")
     # class + awards
     K = yb["class"]
-    check(K["events"] == len(ev) and K["messagesBetweenBots"] == sum(msgs.values()) and K["boydMsgs"] == sum(1 for e in ev if e["type"] == "alex_msg"), "class totals recompute")
+    check(K["events"] == len(ev) and K["messagesBetweenBots"] == sum(msgs.values()) and K["alexMsgs"] == sum(1 for e in ev if e["type"] == "alex_msg"), "class totals recompute")
     allruns = [r for b in fleet["bots"] for rt in b.get("routines", []) for r in rt.get("runs", [])]
     check(K["runs"] == len(allruns) and K["runsOk"] == sum(1 for r in allruns if r.get("status") == "ok"), "class routine runs recompute")
     days = collections.Counter(et(e["ts"]).date().isoformat() for e in ev)
@@ -144,7 +144,7 @@ def main():
     duo, dn = pairs.most_common(1)[0]
     check(yb["awards"][0]["value"] == dn and set(yb["awards"][0]["winner"].split(" & ")) == {names[i] for i in duo}, f"Best Duo = {yb['awards'][0]['winner']} ({dn})")
     for a in yb["awards"][1:]:
-        if a["key"] in ("apps", "boydMsgs", "browse", "shell", "computerUse", "comicStrips"):
+        if a["key"] in ("apps", "alexMsgs", "browse", "shell", "computerUse", "comicStrips"):
             ws = a["winner"].split(" & ")
             vals = {n: (len(exp[n]["apps"]) if a["key"] == "apps" else exp[n][a["key"]]) for n in exp if n in {x["name"] for x in yb["bots"]}}
             best = max(vals.values())
@@ -176,12 +176,12 @@ def main():
             for sg in re.findall(r'data-sig="([^"]+)" data-to="(\d+)"(?: data-from="(\d+)")?', pg):
                 frm = html.unescape(sg[0])
                 if frm == "Alex":
-                    check(int(sg[1]) == e["boydMsgs"], f"[{label}] {b['name']} Alex signature")
+                    check(int(sg[1]) == e["alexMsgs"], f"[{label}] {b['name']} Alex signature")
                 else:
                     fid = next(k for k, v in names.items() if v == frm)
                     check(int(sg[1]) == msgs[(fid, b["id"])] if (fid, b["id"]) in msgs else int(sg[1]) == 0, f"[{label}] {b['name']} ← {frm} count")
                     check(int(sg[2]) == msgs.get((b["id"], fid), 0), f"[{label}] {b['name']} → {frm} count")
-        for k, v in (("events", f"{len(ev):,}"), ("messagesBetweenBots", f"{sum(msgs.values()):,}"), ("boydMsgs", str(K["boydMsgs"]))):
+        for k, v in (("events", f"{len(ev):,}"), ("messagesBetweenBots", f"{sum(msgs.values()):,}"), ("alexMsgs", str(K["alexMsgs"]))):
             check(re.search(rf'data-k="{k}">{re.escape(v)}<', dom) is not None, f"[{label}] class stat {k}={v}")
         cells = re.findall(r'data-f="([^"]+)" data-t="([^"]+)">(\d+)<', dom)
         inv = {v: k for k, v in names.items()}
